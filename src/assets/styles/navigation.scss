@@ -1,0 +1,114 @@
+.navigation {
+    display: flex;
+    position: relative;
+    z-index: 20;
+    opacity: 0;
+    transition: all .5s;
+
+    @include to(480px) {
+        padding-bottom: 20px;
+    }
+
+    &__left {
+        width: 241px;
+        position: relative;
+        margin-right: 104px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 60px;
+
+        @include to(800px) {
+            margin-right: 110px;
+        }
+
+        @include to(480px) {
+            margin-right: 80px;
+        }
+    }
+
+    &__right {
+        width: 241px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+
+    &__title {
+        margin-bottom: 14px;
+        font-size: 25px;
+        line-height: 1.5em;
+        font-weight: 500;
+        color: #f4f4f2;
+
+        @include to(1440px) {
+            font-size: 22px;
+        }
+
+        @include to(480px) {
+            font-size: 16px;
+        }
+    }
+
+    &__inner {
+        &-list {
+            margin-bottom: 40px;
+        }
+
+        &-dropdown {
+            margin-top: 7px;
+            background-color: $darkPurple;
+            padding-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        &-item {
+            margin-bottom: 10px;
+
+            &--dropdown {
+               & > .navigation__inner-link {
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: -17px;
+                        width: 0; 
+                        transition: all .4s;
+                        height: 0; 
+                        border-left: 4px solid transparent;
+                        border-right: 4px solid transparent;
+                        
+                        border-top: 5px solid $purple; 
+                    }
+
+                    &--active {
+                        &::after {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                ul {
+                    display: none;
+                }
+            }
+        }
+
+        &-link {
+            color: #B2A3BE;
+            text-decoration: none;
+            font-size: 16px;
+
+            @include to(1440px) {
+                font-size: 14px;
+            }
+
+            &:hover {
+                color: darken(#B2A3BE, 7%);
+            }
+        }
+    }
+}

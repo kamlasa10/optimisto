@@ -1,0 +1,134 @@
+extends ../layout/main
+block variable
+	-
+		var id_page = 'index-page'
+		var color = 'dark'
+		var decor = true
+	
+block meta
+	title= 'Главная'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
+	script(src='./assets/scripts/index.js')
+	script(src='./assets/scripts/intro.js')
+block content
+	.wrapper
+		.fixed-content.intro-fixed-content
+			.container
+				.socials.socials--fixed
+					.container
+						.socials__title © 2020 Smile Development
+						a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--inst
+							+svg('inst')
+						a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--fb
+							+svg('fb')
+				.fixed-content__triangle
+				.fixed-content__phone.phone.phone--green.header__phone.js-header__phone
+					a(href="tel:0442992203").phone__link.phone__link--purple
+						span.phone__text (044) 299-22-03
+						span.btn-round.phone__btn
+							+svg('phone')
+		section.promo.offset-header.section
+			.promo__left
+				.promo__left-decor
+					+img('leaflet-small-promo.png')
+				.promo__left-content
+					.promo__small-title Затишналокація у парковій зоні
+					.promo__desc Ваші сусіди — це позитивні люди зі схожими інтересами. Познайомитись ближче ви зможете за спільними активностями: в ЖК облаштовані бігові.
+					a(href="#").promo__link.link-with-triangle Про концепцію
+			.promo__right
+				.promo__right-decor
+					+img('leaflet-big-promo.png')
+				.promo__title.title-with-linear Знайти свій <br> життєвий баланс
+					+svg('linear')
+				.promo__video
+					+img('Exclude-promo.svg').promo__video--decor
+					video(autoplay muted)
+						source(src="static/promo-video.mp4" type="video/mp4")
+						source(src="static/promo-video.webm" type="video/webm")
+						source(src="static/promo-video.ogg" type="video/ogg")
+		section.balance.section
+			.balance__decor
+				+img('group-leaflet.png')
+			.container
+				.balance__content
+					.balance__title.title-with-linear Знайти свій життєвий баланс
+						+svg('linear')
+					.balance__list
+						.balance__item Ваші сусіди — це позитивні люди зі схожими інтересами. Познайомитись ближче ви зможете за спільними активностями: в ЖК облаштовані бігові й вело доріжки.
+						.balance__item Ваші сусіди — це позитивні люди зі схожими інтересами. Познайомитись ближче ви зможете за спільними активностями: в ЖК облаштовані бігові й вело доріжки.
+					a(href="#").balance__link.link-with-triangle Обрати квартиру
+		section.features
+			.more__circle-top
+			div.features__wrap
+				.features__item
+					.features__left
+						.features__content
+							.features__title.title-with-linear Переваги комплексу
+								+svg('linear')
+							.features__small-title Мега маркет біля дому
+							.features__desc Метро знаходиться на відстані в 3,21 км від комплексу. Це 5 хвилин на авто, 10 хвилин на транспорті.
+							.features__btn.btn.btn--purple Детальніше
+							.slider-controls.features__controls
+								.slider-controls__dots.slider-controls__dots--violet.features-controls__dots
+								.slider-controls__arrows
+									button(type="button").slider-controls__left.features-controls__left.btn-round.btn-round--white
+									button(type="button").slider-controls__right.features-controls__right.btn.btn--with-triangle Наступна
+					.features__right
+						+img('features-img.png')
+				.features__item
+					.features__left
+						.features__content
+							.features__title.title-with-linear Переваги комплексу
+								+svg('linear')
+							.features__small-title Мега маркет біля дому
+							.features__desc Метро знаходиться на відстані в 3,21 км від комплексу. Це 5 хвилин на авто, 10 хвилин на транспорті.
+							.features__btn.btn.btn--purple Детальніше
+							.slider-controls.features__controls
+								.slider-controls__dots.slider-controls__dots--violet.features-controls__dots
+								.slider-controls__arrows
+									button(type="button").slider-controls__left.features-controls__left.btn-round.btn-round--white
+									button(type="button").slider-controls__right.features-controls__right.btn.btn--with-triangle Наступна
+					.features__right
+						+img('features-img.png')
+		section.more
+			.more__leaflet
+				+img('leaflet-big-promo.png')
+			.container.offset-left
+				.more__wrap
+					.more__title Хочете дізнатись більше?
+					.more__list
+						.more__item
+							.more__img
+								.more__img-wrap
+									+img('more-img.png')
+								a(href="#").more__plus
+									.more__cross
+							a(href="#").more__desc Квартири
+						.more__item
+							.more__img
+								.more__img-wrap
+									+img('more-img2.png')
+								a(href="#").more__plus
+									.more__cross
+							a(href="#").more__desc Інфраструктура
+						.more__item
+							.more__img
+								.more__img-wrap
+									+img('more-img3.png')
+								a(href="#").more__plus
+									.more__cross
+							a(href="#").more__desc Оточення
+			.circle__bottom
+			footer.footer
+				include ../includes/footer.pug
+
+block header
+	header.header.header--dark.header--bg
+		include ../includes/header.pug
+block menu
+	include ../includes/menu.pug
+

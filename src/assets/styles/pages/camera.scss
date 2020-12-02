@@ -1,0 +1,87 @@
+@import './assets/vars';  // переменные
+@import './assets/smart-grid';  // mixins smartgrid.js
+// libraries
+@import './libs';
+
+// assets
+@import './assets/mixins';  // миксины
+@import './assets/fonts';  // шрифты
+@import './assets/base';  // общие стили
+@import './assets/animation';  // анимации
+@import './assets/class'; // main style
+@import './assets/interface'; // main style
+
+
+// sass dima
+@import './header';
+@import './footer';
+@import './404';
+@import './language.scss';
+@import './burger.scss';
+@import './socials.scss';
+@import './menu.scss';
+@import './navigation.scss';
+@import './phone.scss';
+@import './loader';
+
+
+
+
+
+
+
+// Styles
+
+#camera-page {
+    position: relative;
+    background-color: #E5E5E5;
+
+    .camera__decor {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        
+        svg {
+            display: block;
+            margin-top: auto;
+            z-index: -1;
+            width: 45vw;
+            height: 55vh;
+
+            @include to(1440px) {
+                width: 53vw;
+                height: 45vh;
+            }
+        }
+    }
+}
+
+.camera {
+
+    &__wrap {
+        position: relative;
+        z-index: 2;
+        display: flex;
+    }
+
+    &__tabs {
+        margin-right: 74px;
+    }
+
+    &__tab-block {
+        margin-bottom: 20px;
+    }
+
+    &__content {
+        width: 80%;
+        iframe {
+            width: 100%;
+            height: 70vh;
+
+            @include to(1440px) {
+                height: 63vh;
+            }
+        }
+    }
+}

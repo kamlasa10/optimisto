@@ -1,0 +1,60 @@
+extends ../layout/main
+block variable
+	-
+		var title_page = 'Расположение'
+		var id_page = 'location-page'
+		var color = "dark"
+	
+block meta
+	title= 'Расположение'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9nfM9ITx5m84p5GxlRoXa24A6jBOFe3U&libraries=&v=weekly")
+	script(src='./assets/scripts/index.js')
+	script(src="./assets/scripts/location.js")
+block content
+	.location.section
+		.fixed-content.fixed-content--end
+			.container
+				.socials.socials--fixed
+					.container
+						.socials__title © 2020 Smile Development
+						a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
+							+svg('inst')
+						a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
+							+svg('fb')
+				.phone.phone--green
+					a.phone__link(href='tel:0442992203')
+						span.phone__text (044) 299-22-03
+						span.btn-round.phone__btn
+							+svg('phone')
+		.container.offset-top
+				.location__content
+					.location__left
+						.location__title.page-title Розташування
+						a(href="https://www.google.com.ua/maps/place/%D0%96%D0%9A+%22%D0%9E%D0%BF%D1%82%D0%B8%D0%BC%D1%96%D1%81%D1%82%D0%BE%22/@50.3460379,30.4192248,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4c9cf7a155ac9:0xc326a448605409c8!8m2!3d50.3460345!4d30.4214135?hl=ru" target="_blank").btn.btn--green.location__btn Відкрити карту
+					.location__right
+						ul.location__list
+							li.location__item.location__item--1
+								+svg('home')
+								.location__item-wrap
+									.location__item-title Адреса будинку
+									.location__item-desc c. Гатне, вул. Оптимістична, 1
+							li.location__item.location__item--2
+								+svg('location')
+								.location__item-wrap
+									.location__item-title Офіс продажу
+									.location__item-desc c. Гатне, вул. Оптимістична, 1
+		.location__map
+		footer.footer.footer--fixed
+			include ../includes/footer.pug
+
+
+block header
+	header.header.header--dark.header--bordered
+		include ../includes/header.pug
+block menu
+	include ../includes/menu.pug
+

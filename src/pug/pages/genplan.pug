@@ -1,0 +1,60 @@
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Генплан'
+    var id_page = 'genplan-page'
+    var class_page = 'genplan-page'
+    var color = "dark"
+
+block meta
+  title= 'Генплан'
+  meta(name='description', content='')
+block head
+  link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(src='./assets/scripts/index.js')
+  script(src="./assets/scripts/genplan.js")
+
+block content
+  .fixed-content.fixed-content--end
+    .container
+      .socials.socials--fixed
+        .container
+          .socials__title © 2020 Smile Development
+          a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
+            +svg('inst')
+          a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
+            +svg('fb')
+  .genplan__phone
+    .container
+      .phone.phone--green
+        a.phone__link(href='tel:0442992203')
+        span.phone__text (044) 299-22-03
+        span.btn-round.phone__btn
+          +svg('phone')
+    
+  footer.footer.footer--fixed
+      include ../includes/footer.pug
+  section.genplan
+    .genplan__wrap
+      .genplan__left
+        .genplan__left-wrap
+          include ../includes/genplan.html
+      .genplan__right
+        .genplan__right-content
+          .genplan__title.section-small-title План забудови
+          ul.genplan__list
+            li(data-plan-item="run").genplan__item Бігова доріжка
+            li(data-plan-item="promenad").genplan__item Зона променада
+            li(data-plan-item="kinder").genplan__item Дитячий майданчик
+            li(data-plan-item="park").genplan__item Зона відпочинку
+            li(data-plan-item="tennis").genplan__item Настільний теніс
+            li(data-plan-item="sport").genplan__item Спорт майданчик
+            li(data-plan-item="parking").genplan__item Паркінг з зарядками 
+          a(href="./infrastructure.html").genplan__link.link-with-triangle Інфраструктура
+block header
+  header.header.header--dark.header--bordered
+    include ../includes/header.pug
+block menu
+  include ../includes/menu.pug
+

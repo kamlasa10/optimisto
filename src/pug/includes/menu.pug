@@ -1,0 +1,88 @@
+.menu
+    img(src="./assets/images/Exclude.png").menu-decor1
+    +img('menu-decor.png').menu-decor2
+    .menu__left
+        //- .menu__decor
+        //-     +svg('menu-decor')
+        //- .menu__left-logo
+        //-     +img('logo-white.svg')
+    .menu__right
+        .menu__right-top
+            .menu__right-title Меню
+            button(type="button").menu__right-close.js-menu__right-close
+                span.menu__right-close-text Закрити
+                span.btn-round.menu__right-close-icon
+                    +svg('cross')
+        nav.navigation
+            .navigation__left
+                .navigation__item
+                    .navigation__title Головна
+                    ul.navigation__inner-list
+                        li.navigation__inner-item
+                            a(href="./building.html").navigation__inner-link Про комплекс
+                        li.navigation__inner-item
+                            a(href="./genplan.html").navigation__inner-link План забудови
+                        li.navigation__inner-item
+                            a(href="./infrastructure.html").navigation__inner-link Інфраструктура
+                        li.navigation__inner-item
+                            a(href="./doc.html").navigation__inner-link Документація
+                        li.navigation__inner-item
+                            a(href="./creator.html").navigation__inner-link Про забудовника
+                        li.navigation__inner-item
+                            a(href="./news.html").navigation__inner-link Новини
+                        li.navigation__inner-item
+                            a(href="./buy.html").navigation__inner-link Для тих, хто придбав
+                        li.navigation__inner-item
+                            a(href="./company.html").navigation__inner-link Управляюча компанія
+                .navigation__item
+                    .navigation__title Будівництво
+                    ul.navigation__inner-list
+                        li.navigation__inner-item
+                            a(href="./progress.html").navigation__inner-link Хід будівництва
+                        li.navigation__inner-item
+                            a(href="./camera.html").navigation__inner-link Камери на будівництві
+                        li.navigation__inner-item
+                            a(href="./panorama.html").navigation__inner-link Панорама 360
+                        li.navigation__inner-item
+                            a(href="./gallery.html").navigation__inner-link Галерея
+                .socials.menu__socials
+                    a(href="#").socials__link.socials__link--inst
+                        +svg('inst')
+                    a(href="#").socials__link.socials__link--fb
+                        +svg('fb')                  
+            .navigation__right
+                .navigation__item
+                    .navigation__title Оберіть  вашу квартиру
+                    ul.navigation__inner-list
+                        li.navigation__inner-item
+                            a(href="./plan-building.html").navigation__inner-link На плані забудови
+                        li.navigation__inner-item
+                            a(href="./params.html").navigation__inner-link За параметрами
+                        li.navigation__inner-item
+                            a(href="./3d-tour.html").navigation__inner-link 3Д тури
+                        li.navigation__inner-item.navigation__inner-item--dropdown
+                            a().navigation__inner-link Умови придбання
+                            ul.navigation__inner-dropdown
+                                li.navigation__inner-dropdown-item
+                                    a(href="./credit.html").navigation__inner-link Кредит
+                                li.navigation__inner-dropdown-item
+                                    a(href="./termination.html").navigation__inner-link Розтермінування
+                        li.navigation__inner-item
+                            a(href="./technical.html").navigation__inner-link Технічні характеристики
+                .navigation__item
+                    .navigation__title Комерційна нерухомість
+                    ul.navigation__inner-list
+                        li.navigation__inner-item
+                            a(href="./technical.html").navigation__inner-link Технічні характеристики
+                .navigation__item
+                    .navigation__title Контакти
+                    ul.navigation__inner-list
+                        li.navigation__inner-item
+                            a(href="./location.html").navigation__inner-link Розташування
+                        li.navigation__inner-item
+                            a(href="./contacts.html").navigation__inner-link Зв'язок
+            .phone.menu__phone
+                a(href="tel:0442992203").phone__link
+                    span.phone__text (044) 299-22-03
+                    span.btn-round.phone__btn
+                        +svg('phone')

@@ -1,0 +1,62 @@
+@import './assets/vars';  // переменные
+@import './assets/smart-grid';  // mixins smartgrid.js
+// libraries
+@import './libs';
+
+// assets
+@import './assets/mixins';  // миксины
+@import './assets/fonts';  // шрифты
+@import './assets/base';  // общие стили
+@import './assets/animation';  // анимации
+@import './assets/class'; // main style
+@import './assets/interface'; // main style
+
+
+// sass dima
+@import './header';
+@import './footer';
+@import './404';
+@import './intro.scss';
+@import './language.scss';
+@import './burger.scss';
+@import './socials.scss';
+@import './menu.scss';
+@import './navigation.scss';
+@import "./balance";
+@import "./features";
+@import './phone.scss';
+@import "./promo";
+@import './slider-controls.scss';
+@import "more";
+@import "overlay";
+@import './loader';
+@import './date.scss';
+@import './slider.scss';
+
+//pages
+    @import "./pages/gallery.scss";
+    @import './pages/camera.scss';
+    @import './pages/progress.scss';
+    @import './pages/contacts.scss';
+    @import "./pages/location";
+    @import "./pages/news";
+    @import "./pages/doc";
+    @import "./pages/news-single";
+    @import "./pages/buy.scss";
+    @import "./pages/infostructure.scss";
+    @import "./pages/company.scss";
+    @import './pages/creator.scss';
+    @import "./pages/termination.scss";
+    @import "./pages//building.scss";
+    @import "./pages/3d.scss";
+    @import "./pages/genplan.scss";
+
+#index-page {
+    .fixed-content__phone {
+        right: 50px;
+
+        @include to(1440px) {
+            right: 30px;
+        }
+    }
+}

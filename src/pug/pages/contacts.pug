@@ -1,0 +1,81 @@
+extends ../layout/main
+block variable
+    -
+        var title_page = 'Свзяь'
+        var id_page = 'contacts-page'
+        var decor = true
+        var color = 'dark'
+	
+block meta
+    title= 'Связь'
+    meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+    script(src='./assets/scripts/index.js')
+    script(src="./assets/scripts/contacts.js")
+
+block content
+    .fixed-content.fixed-content--end
+        .container
+            .socials.socials--fixed
+                .container
+                    .socials__title © 2020 Smile Development
+                    a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
+                        +svg('inst')
+                    a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
+                        +svg('fb')
+            .phone.phone--green
+                a.phone__link(href='tel:0442992203')
+                    span.phone__text (044) 299-22-03
+                    span.btn-round.phone__btn
+                        +svg('phone')
+    .contacts.offset-top.section
+        .contacts__left
+            +img('leaflet-small-promo.png').contacts__left-decor
+            .contacts__left-wrap
+                .contacts__title Відділ продажу
+                .contacts__list
+                    .contacts__list-item.contacts__list-item--1
+                        a(href="tel:0442992203").contacts__list-link
+                            +svg('phone-old')
+                            span (044) 299-22-03
+                    .contacts__list-item.contacts__list-item--2 
+                        +svg('home')
+                        span c. Гатне, вул. Оптимістична, 1
+                    .contacts__list-item.contacts__list-item--3
+                        +svg('time')
+                        .contacts__list-item-wrap
+                            .contacts__list-item-block 
+                                span 10 : 00 – 19 : 00     
+                                span пн-пт
+                            .contacts__list-item-block 
+                                span 10 : 00 – 17 : 00      
+                                span сб-нд
+        .contacts__right
+            +img('menu-decor.png').contacts__decor
+            form(action="#" method="post" data-form="true").callback-form
+                .callback-form__title Форма зворотнього зв′язку
+                .callback-form__content
+                    .callback-form__item
+                        div.callback-form__item-inner
+                            input(type="text" name="name" placeholder="Ваше ім’я").callback-form__input
+                    .callback-form__item
+                        div.callback-form__item-inner
+                            input(type="tel" name="phone" placeholder="Ваш телефон").callback-form__input
+                    .callback-form__item
+                        input(type="checkbox" id="ok" placeholder="Ваш телефон" value="yes").callback-form__checkbox
+                        label(for="ok").callback-form__custom-checkbox
+                        .callback-form__text даю згоду на обробку персональних даних
+                    .callback-form__block
+                        button(type="submit").btn.btn--white.callback-form__btn.submit__form Відправити
+    footer.footer.footer--fixed
+        include ../includes/footer.pug
+
+
+block header
+    header.header.header--dark.header--bordered
+        include ../includes/header.pug
+block menu
+    include ../includes/menu.pug
+

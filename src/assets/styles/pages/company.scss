@@ -1,0 +1,96 @@
+@import './pages/buy.scss';
+
+#company-page {
+    background-color: #e5e5e5;
+
+    .fixed-content__triangle {
+        border-top-color: $text;
+    }
+
+    .company {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        padding-bottom: 50px;
+
+        &__decor {
+            position: absolute;
+            left: 0;
+            top: 130px;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+
+        &__left {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            position: relative;
+
+            &-content {
+                max-width: 405px;
+            }
+
+            &-decor {
+                position: absolute;
+                bottom: 0;
+                left: 20%;
+            }
+        }
+
+        &__desc {
+            margin-bottom: 23px;
+        }
+
+        &__right {
+            position: relative;
+            margin-left: 100px;
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10vw;
+
+            @include to(1440px) {
+                margin-left: 0;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                object-fit: contain;
+
+            }
+        }
+    }
+
+    .more {
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 564px;
+            height: 564px;
+            border-radius: 50%;
+            background-color: #f4f4f2;
+            transform: translate(60%, 60%);
+
+            @include to(1370px) {
+                transform: translate(65%, 65%);
+            }
+        }
+
+        &__leaflet {
+            top: 20%;
+            transform: rotate(47deg);
+
+            img {
+                width: 172px;
+                height: 168px;
+            }
+        }
+    }
+}

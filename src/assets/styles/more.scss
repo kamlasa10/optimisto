@@ -1,0 +1,372 @@
+#index-page {
+  .fixed-content {
+    @include to(770px) {
+      bottom: 130px;
+    }
+  }
+
+  .footer {
+    @include to(480px) {
+      height: 44px;
+      width: 100%;
+      background: #F4F4F2;
+      box-shadow: 0px 4px 20px rgba(36, 10, 58, 0.15);
+    }
+  }
+}
+
+.more {
+  overflow: hidden;
+  position: relative;
+  min-height: calc(100vh + 84px);
+  background-color: #fff;
+
+  @include to(770px) {
+    min-height: auto;
+    padding-top: 80px;
+  }
+
+  @include to(480px) {
+    padding-top: 50px;
+  }
+
+  .container {
+    padding-left: 130px;
+    padding-right: 130px;
+
+    @include to(1025px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @include to(480px) {
+      padding: 0 10px;
+    }
+  }
+
+  .offset-left {
+    margin-left: 0;
+
+    @include to(770px) {
+      padding-bottom: 120px;
+    }
+
+    @include to(480px) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__item {
+    @include to(770px) {
+      display: flex;
+      flex-direction: column;
+
+      .more__desc {
+        margin-top: auto;
+
+        @include to(480px) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+
+    @include to(770px) {
+      bottom: 120px;
+    }
+
+    @include to(480px) {
+      bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__leaflet {
+    position: absolute;
+    top: 3%;
+    right: -2%;
+    transform: rotate(-2deg);
+
+    @include to(770px) {
+      top: 85%;
+      z-index: 5;
+      right: -4%;
+    }
+
+    @include to(480px) {
+      top: 96%;
+    }
+
+    img {
+      width: 205px;
+      height: 193px;
+      object-fit: cover;
+
+      @include to(770px) {
+        width: 179px;
+        height: 175px;
+      }
+
+      @include to(480px) {
+        width: 98px;
+        height: 95px;
+      }
+    }
+  }
+
+  &__wrap {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include to(770px) {
+      min-height: auto;
+      padding-bottom: 120px;
+    }
+
+    @include to(480px) {
+      padding-bottom: 100px;
+    }
+  }
+
+  &__title {
+    margin-top: 13vh;
+    text-align: center;
+    margin-bottom: 54px;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 1.4em;
+    color: $darkPurple;
+
+    @include to(1440px) {
+      font-size: 34px;
+    }
+
+    @include to(770px) {
+      margin-top: 0;
+    }
+
+    @include to(480px) {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 75px;
+    row-gap: 25px;
+
+    @include to(770px) {
+      column-gap: 55px;
+    }
+
+    @include to(480px) {
+      justify-content: center;
+      row-gap: 40px;
+      grid-template-columns: 80%;
+      column-gap: 0;
+    }
+  }
+
+  &__item {
+    .more__img {
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
+
+        &::after {
+          opacity: 1;
+        }
+
+        .more__plus {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    @include to(770px) {
+      margin-bottom: 25px;
+    }
+
+    @include to(480px) {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all .4s;
+      background-color: rgba(#000, 0.5);
+      border-radius: 50%;
+    }
+
+    &-wrap {
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    img {
+      transition: all .4s;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .more__plus {
+      z-index: 2;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 11%;
+      right: 5%;
+      width: 75px;
+      height: 75px;
+      background-color: $green;
+      border-radius: 50%;
+
+      @include to(1025px) {
+        bottom: 5%;
+        right: -2%;
+      }
+
+      @include to(770px) {
+        width: 47px;
+        height: 47px;
+        bottom: 6%;
+        right: 4%;
+      }
+
+      @include to(480px) {
+        bottom: 9%;
+      }
+    }
+
+    .more__cross {
+      display: block;
+      position: absolute;
+      transform: rotate(45deg);
+      right: 17px;
+      top: 24px;
+      width: 40px;
+      height: 32px;
+
+      @include to(1440px) {
+        right: 17px;
+        top: 24px;
+      }
+
+      @include to(770px) {
+        width: 19px;
+        right: 24px;
+        top: 7px;
+      }
+
+      @include to(480px) {
+        right: 25px;
+        top: 8px;
+      }
+
+      .more__cross:hover {
+        opacity: 1;
+      }
+
+      &:before, &:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 30px;
+        width: 3px;
+        background-color: #fff;
+
+        @include to(1440px) {
+          height: 25px;
+        }
+
+        @include to(770px) {
+          height: 17px;
+        }
+
+        @include to(480px) {
+          height: 15px;
+        }
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__desc {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 24px;
+    font-size: 27px;
+    line-height: 1.4em;
+    color: $darkPurple;
+    font-weight: 500;
+
+    @include to(1440px) {
+      font-size: 24px;
+    }
+  }
+
+  &__circle-top {
+    position: absolute;
+    z-index: 5;
+    width: 342px;
+    height: 342px;
+    bottom: -16%;
+    left: 0;
+    transform: translate(-60%, 0%);
+    background-color: #EAE3EC;
+    border-radius: 50%;
+
+    @include to(1440px) {
+      bottom: -18%;
+    }
+
+    @include to(800px) {
+      width: 212px;
+      height: 212px;
+      bottom: -15%;
+      transform: translate(-70%, 0%);
+    }
+
+    @include to(480px) {
+      width: 150px;
+      transform: translate(-70%, -35%);
+      height: 150px;
+    }
+  }
+}

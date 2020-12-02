@@ -1,0 +1,8 @@
+.breadcrumbs
+    .container
+        if breadcrumbsBtn == 'gallery'
+            include ./filter-gallery.pug
+        if breadcrumbsBtn === 'panorama'
+            include ./filter-panorama.pug
+        if breadcrumbsBtn === 'camera'
+            include ./filter-camera.pug

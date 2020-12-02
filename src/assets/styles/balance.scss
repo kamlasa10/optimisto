@@ -1,0 +1,163 @@
+.balance {
+  background-color: #e5e5e5;
+  position: relative;
+
+  .link-with-triangle {
+    @include to(480px) {
+      margin-left: 75px;
+    }
+  }
+
+  &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      transform: translate(33%, 25%);
+      background-color: #fff;
+
+    @include to(1440px) {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      transform: translate(28%, 38%);
+    }
+
+    @include to(800px) {
+      width: 250px;
+      height: 250px;
+    }
+
+    @include to(480px) {
+      display: none;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    right: 0;
+    top: 26%;
+    transform: translateX(34%);
+    z-index: 3;
+
+    @include to(1440px) {
+      top: 22%;
+    }
+
+    @include to(800px) {
+      top: 52%;
+      img {
+        width: 103px;
+      }
+    }
+
+    @include to(480px) {
+      top: 65%;
+      img {
+        width: 77px;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    transform: translate(0px, 25%);
+    height: 100%;
+    background: url(../images/balance-img.png) no-repeat center/cover;
+    background-position: 83% 0;
+
+    @include to(800px) {
+      content: "";
+      position: absolute;
+      width: 64%;
+      transform: translate(-26%, 12%);
+      height: 50%;
+    }
+
+    @include to(480px) {
+      width: 88%;
+      height: 50%;
+      transform: translate(-9%, 25%);
+    }
+
+    @include to(414px) {
+      transform: translate(-14%, 25%);
+    }
+
+    @include to(375px) {
+      transform: translate(-7%, 25%);
+    }
+  }
+
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    @include to(800px) {
+      padding-top: 80px;
+      justify-content: stretch;
+      min-height: 726px;
+    }
+    
+    @include to(480px) {
+      min-height: 620px;
+      padding-top: 0;
+      justify-content: flex-start;
+    }
+  }
+
+  &__content {
+    width: 60%;
+
+    @include to(900px) {
+      width: 92%;
+      padding-bottom: 75px;
+    }
+
+    @include to(480px) {
+      padding-top: 0;
+      padding-bottom: 270px;
+      width: 100%;
+    }
+  }
+
+  .balance__title {
+    width: 400px;
+
+    @include to(480px) {
+      margin-right: 80px;
+      width: auto;
+    }
+  }
+
+  &__list {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 44px;
+    row-gap: 25px;
+    margin-left: 0;
+
+    @include to(1440px) {
+      width: 90%;
+    }
+
+    @include to(480px) {
+      margin-bottom: 30px;
+      width: 100%;
+      padding-left: 50px;
+      grid-template-columns: 1fr;
+      column-gap: 0;
+    }
+  }
+}

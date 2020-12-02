@@ -1,0 +1,157 @@
+#buy-page {
+    color: $darkPurple;
+
+    .footer {
+        margin-bottom: 5px;
+    }
+
+    .fixed-content__triangle {
+        top: 20px;
+    }
+
+    .footer__decor {
+        margin-left: 30vw;
+        transform: translateY(33px) rotate(-12deg);
+    }
+
+    .footer__copyright {
+        margin-top: 20px;
+    }
+
+    .more {
+        min-height: auto;
+    }
+
+    .more__leaflet {
+        transform: rotate(48deg);
+        top: 21%;
+        right: -2%;
+
+        @include  to(1440px) {
+            top: 18%;
+        }
+
+        img {
+            width: 172px;
+            height: 168px;
+            object-fit: contain;
+        }
+    }
+
+    .buy {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: #e5e5e5;
+
+        &__more {
+            overflow: hidden;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 564px;
+                height: 564px;
+                border-radius: 50%;
+                background-color: #f4f4f2;
+                transform: translate(47%, 74%);
+
+                @include to(1370px) {
+                    transform: translate(55%, 71%);
+                }
+            }
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        &__img {
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            width: 43vw;
+            transform: translateY(29%);
+
+            @include to(1445px) {
+                width: 56vw;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &__content {
+            max-width: 574px;
+
+            &-wrap {
+                margin-left: 55px;
+            }
+        }
+
+        &__desc {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__item {
+            display: flex;
+            margin-bottom: 37px;
+
+            &-text {
+                margin-bottom: 7px;
+            }
+
+            &-link {
+                font-size: 20px;
+                line-height: 1.5em;
+                font-weight: 500;
+                color: $darkPurple;
+                text-decoration: none;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &-left {
+                margin-right: 10px;
+            }
+
+            svg {
+                fill: $green;
+            }
+
+            &--1 {
+                svg {
+                    width: 16px;
+                    height: 12px;
+                }
+            }
+
+            &--2 {
+                svg {
+                    width: 17px;
+                    height: 13px;
+                }
+            }
+        }
+    }
+
+    .more__title {
+        margin-top: 0;
+    }
+}

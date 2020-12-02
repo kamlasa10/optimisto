@@ -1,0 +1,120 @@
+.slider-controls {
+    display: flex;
+
+    &__block {
+        display: flex;
+        align-items: center;
+        border-radius: 60px;
+        min-width: 156px;
+        padding-left: 24px;
+        cursor: pointer;
+        transition: all .4s;
+
+        @include to(800px) {
+            background-color: #fff;
+        } 
+
+        @include to(480px) {
+            min-width: auto;
+            padding-left: 0;
+        }
+
+        &:hover {
+            background-color: #fff;
+
+            span {
+                display: block;
+            }
+        }
+
+        span {
+            font-family: $default-font;
+            color: $purple;
+            font-weight: 500;
+            display: none;
+            transition: all .4s;
+
+            @include to(800px) {
+                display: block;
+            }
+
+            @include to(480px) {
+                display: none;
+            }
+        }
+
+        .intro-controls__right {
+            margin-left: auto;
+            &::before {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &__dots {
+        margin-right: 10px;
+
+        .slick-dots {
+            display: flex;
+
+            li.slick-active {
+                button::after {
+                    background-color: $green;
+                }
+            }
+
+            button {
+                font-size: 0;
+                position: relative;
+                border: none;
+                background-color: transparent;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    margin-right: 13px;
+
+                    @include to(1440px) {
+                        width: 6px;
+                        height: 6px;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &--violet {
+            .slick-dots {
+                li.slick-active {
+                    button::after {
+                        background-color: $purple;
+                    }
+                }
+            }
+        }
+    }
+
+    &__arrows {
+        display: flex;
+        align-items: center;
+    }
+
+    &__left {
+        margin-right: 27px;
+    }
+
+    &__left,
+    &__right {
+        @include to(480px) {
+            width: 40px !important;
+            height: 40px !important;
+        }
+    }
+}

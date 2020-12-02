@@ -1,0 +1,99 @@
+.slider {
+    &__item {
+        cursor: pointer;
+        width: 350px;
+
+        @include to(1440px) {
+            width: 310px;
+        }
+    }
+
+    &__wrap {
+        max-width: 1920px;
+        margin: 0 auto;
+        margin-top: 15vh;
+        .slick-track {
+            padding-left: 140px;
+        }
+
+        @include to(1440px) {
+            margin-top: 6vh;
+        }
+    }
+
+    .more__plus {
+        right: -3px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .more__cross {
+        right: 13px;
+        top: 23px;
+
+        @include to(1440px) {
+            right: 15px;
+            top: 22px;
+        }
+    }
+
+    .more__desc {
+        margin-bottom: 14px;
+    }
+
+    &__gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $text;
+        text-decoration: none;
+        transition: all .4s;
+        opacity: 0.8;
+
+        svg {
+            margin-right: 12px;
+            width: 18px;
+            height: 14px;
+            text-decoration: none;
+
+            @include to(1440px) {
+                width: 16px;
+                height: 12px;
+            }
+        }
+    }
+
+    &__item {
+        margin-right: 75px;
+    }
+
+    &-control {
+        z-index: 7;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 475px;
+        height: 475px;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        bottom: -400px;
+        background-color: #fff;
+
+        &-btn {
+            margin-top: 20px;
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &-right {
+            &::before {
+                transform: rotate(0deg) !important;
+            }
+        }
+    }
+}

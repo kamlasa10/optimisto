@@ -1,0 +1,74 @@
+.phone {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            .phone__text {
+                opacity: .7;
+            }
+
+            .phone__btn {
+                background-color: darken($purple, 5%);
+            }
+        }
+    }
+
+    &__text {
+        font-size: 25px;
+        line-height: 1.1em;
+        color: #f4f4f2;
+        text-decoration: none;
+        font-weight: 600;
+        margin-right: 20px;
+        text-decoration: none;
+
+        @include to(1440px) {
+            font-size: 22px;
+        }
+
+        @include to(480px) {
+            display: none;
+            font-size: 18px;
+            line-height: 1.4em;
+        }
+    }
+
+    &__btn {
+        svg {
+            width: 18px;
+            height: 18px;
+
+            @include to(480px) {
+                width: 11px;
+                height: 11px;
+            }
+        }
+    }
+
+    &--green {
+        color: #fff;
+
+        .phone__btn {
+            background-color: $green;
+        }
+
+        .phone__link--purple .phone__text {
+            color: $darkPurple;
+        }
+
+        .phone__link:hover {
+            .phone__text {
+                opacity: 1;
+            }
+
+            .phone__btn {
+                background-color: lighten($green, 5%);
+            }
+        }
+    }
+}

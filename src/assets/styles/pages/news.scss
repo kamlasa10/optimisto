@@ -1,0 +1,41 @@
+@import "./progress";
+
+.news-page {
+  .slider {
+    padding-bottom: 100px;
+  }
+}
+
+.news {
+  &__content {
+    position: relative;
+    padding-left: 34px;
+  }
+
+  &__desc {
+    text-align: left;
+  }
+
+  &__intro {
+    text-align: left;
+  }
+
+  .slider__wrap {
+    margin-top: 10vh;
+
+    @include to(1440px) {
+      margin-top: -5vh;
+    }
+  }
+
+  .date {
+    margin-top: 0;
+  }
+
+  &__date {
+    top: 31px;
+    position: absolute;
+    left: -30px;
+    transform: rotate(-90deg);
+  }
+}

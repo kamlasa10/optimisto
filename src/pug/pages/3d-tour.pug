@@ -1,0 +1,70 @@
+extends ../layout/main
+block variable
+    -
+        var title_page = '3Д тур'
+        var id_page = '3d-tour-page'
+        var color = "dark"
+	
+block meta
+    title= '3д Тур'
+    meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+    script(src='./assets/scripts/index.js')
+    script(src="./assets/scripts/3d-tour.js")
+
+block content
+    .fixed-content.fixed-content--end
+        .container
+            .socials.socials--fixed
+                .container
+                    .socials__title © 2020 Smile Development
+                    a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--inst
+                        +svg('inst')
+                    a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--fb
+                        +svg('fb')
+            .phone.phone--green
+                a.phone__link.phone__link--purple(href='tel:0442992203')
+                    span.phone__text (044) 299-22-03
+                    span.btn-round.phone__btn
+                        +svg('phone')
+    
+    section.section.tour
+        .tour__details
+            button(type="button").tour___details-btn.js-tour___details-btn.btn.btn--green Подробиці
+        .tour__details-content
+            .tour__details-close
+                button(type="button").menu__right-close.js-tour__details-close
+                    span.menu__right-close-text Закрити
+                    span.btn-round.menu__right-close-icon
+                        +svg('cross')
+            .tour__details-wrap
+                .tour__details-title.title-with-linear 3Д планування 2-кімнатної квартири
+                    +svg('linear')
+                .tour__details-list
+                    .tour__details-desc Саме так може виглядати ваша двокімнатна квартира.
+                    .tour__details-desc Загальна площа помешкання складає 66,48 м2. Квартира розташована на 2 поверсі у 3-й черзі. Дві просторі кімнати, два санвузли, затишна кухня - найближчим часом можуть стати вашими.
+                    .tour__details-desc Введення в експлуатацію 1 квартал 2021 року
+        .tour__intro
+            .tour__intro-close
+                button(type="button").menu__right-close.js-tour__intro-close
+                    span.menu__right-close-text Закрити
+                    span.btn-round.menu__right-close-icon
+                        +svg('cross')
+            .tour__intro-content
+                .tour__intro-title Як може виглядати ваша квартира? 
+                .tour__intro-desc Підготували 3D-тури квартирою з ремонтом, щоб ви могли візуалізувати майбутнє затишне житло. 
+                .tour__intro-start
+                    +svg('tour-start')
+                    span Тисніть, щоб побачити на власні очі.
+        iframe.tour__frame(name="3d" src="https://vrnet.io/view5.16a/?model=ua/smile/optimisto/2a/3" height="100%" width="100%" scrolling="no" style="vertical-align: middle;")
+        footer.footer.footer--fixed
+            include ../includes/footer.pug
+
+block header
+    header.header.header--dark.header--bordered
+        include ../includes/header.pug
+block menu
+    include ../includes/menu.pug
+

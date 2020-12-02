@@ -1,0 +1,11 @@
+.burger-btn {
+    svg {
+        width: 16px;
+        height: 13px;
+
+        @include to(480px) {
+            width: 13px;
+            height: 11px;
+        }
+    }
+}

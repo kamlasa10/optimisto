@@ -1,0 +1,94 @@
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Про комплект'
+    var id_page = 'building-page'
+    var class_page = 'building-page'
+    var color = "dark"
+
+block meta
+  title= 'Про забудовника'
+  meta(name='description', content='')
+block head
+  link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(src='./assets/scripts/index.js')
+  script(src="./assets/scripts/bulding.js")
+
+block content
+  .fixed-content.fixed-content--end
+    .container
+      .socials.socials--fixed
+        .container
+          .socials__title © 2020 Smile Development
+          a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
+            +svg('inst')
+          a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
+            +svg('fb')
+      .fixed-content__triangle
+      .phone.phone--green
+        a.phone__link.phone__link--purple(href='tel:0442992203')
+          span.phone__text (044) 299-22-03
+          span.btn-round.phone__btn
+            +svg('phone')
+  section.promo.offset-header.section.building
+    .promo__left
+        .promo__left-decor
+            +img('leaflet-small-promo.png')
+        .promo__left-content
+            .promo__small-title Квартал позитивних людей
+            .promo__desc Квартал позитивних людей “Оптимісто” будується у Гатному, Київська область. Розташування комплексу забезпечує доступність усіх важливих локацій — поряд Одеське шосе та зупинки громадського транспорту. Станція метро “Теремки” — 5 хвилин на авто. 
+    .promo__right
+        .promo__right-decor
+            +img('leaflet-big-promo.png')
+        .promo__title.title-with-linear Про комплекс
+            +svg('linear')
+        .promo__video
+            +img('Exclude-promo.svg').promo__video--decor
+            +img('building-img.png').promo__video-img
+  section.building-security.section
+    .building-security__decor
+        +img('group-leaflet.png')
+    .container
+        .building-security__left
+            .building-security__img
+                +img('bulding-security-img.png').building-security__img-big
+                +img('camera-img.png').building-security__img-camera
+                .building-security__img-circle
+        .building-security__right 
+            .building-security__right-content
+                .building-security__title Безпека — понад усе
+                .bulding-security__desc Дбаючи про спокій мешканців, двір буде закрито від автомобілів. Безпека — понад усе, і тому запроваджено карткову систему входу/виходу у житловий комплекс, будинки знаходяться під охороною і цілодобовим відеоспостереженням.
+  section.building-functional.section
+    .building-functional__circle
+        +img('two-leaflet.png')
+    .building-functional__decor
+        +img('leaflet-small-promo.png')
+    .building-functional__img
+        +img('building-functional-img.png')
+    .container
+        .building-functional__title.title-with-linear Функціональні <br> зони кварталу
+            +svg('linear')
+        .building-functional__content
+            .building-functional__desc Внутрішній простір кварталу поділений на функціональні зони: прогулянкову променаду з фонтаном, ігрові зони для дітей різного віку, місця для відпочинку. Насичена інфраструктура поруч із будинками доповнюється власною інфраструктурою
+            .building-function__desc Перші поверхи призначені для комерційних приміщень. Улюблена кав’ярня, салон краси, відділення пошти — все потрібне під рукою. Для найменших на території комплексу буде облаштований центр дитячого розвитку. 
+  section.building-attention.section
+    .building-attention__right-decor
+      +img('group-leaflet.png')
+    .building-attention__left-decor
+        +img('group-2-leaflet.png')
+    .container
+        .building-attention__left.offset-left
+            +img('attention-img.png')
+        .building-attention__right
+            .building-attention__right-content
+                .building-attention__title.title-with-linear Приділено увагу <br> кожній деталі
+                    +svg('linear')
+                .building-attention__small-title.section-small-title Пріоритет девелопера — якість будівництва і комфорт мешканців.
+                .building-attention__desc Квартири у монолітно-каркасних будинках, утеплених мінеральною ватою, мають індивідуальне опалення. За бажанням можна вибрати опцію “розумний будинок”.  Мешканці можуть користуватися коморами для зберігання речей — тут можна тримати літні шини, велосипед, дитячі санчата та інше.
+block header
+  header.header.header--dark.header--bordered
+    include ../includes/header.pug
+block menu
+  include ../includes/menu.pug
+

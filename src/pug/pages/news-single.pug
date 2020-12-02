@@ -1,0 +1,98 @@
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Новости'
+    var id_page = 'news-desc-page'
+    var class_page = 'news-desc-page'
+    var color = "dark"
+
+block meta
+  title= 'Новости'
+  meta(name='description', content='')
+block head
+  link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(src='./assets/scripts/index.js')
+block content
+  .fixed-content.fixed-content--end
+    .container
+      .socials.socials--fixed
+        .container
+          .socials__title © 2020 Smile Development
+          a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
+            +svg('inst')
+          a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
+            +svg('fb')
+      .fixed-content__triangle
+      .phone.phone--green
+        a.phone__link(href='tel:0442992203')
+          span.phone__text (044) 299-22-03
+          span.btn-round.phone__btn
+            +svg('phone')
+  .back
+    .container
+      a(href="./news/").back__link
+        span.btn-round.btn-round--pink
+        span.back__text назад
+  section.section.news-desc
+    .news-desc__left
+      +img('news-single.png')
+    .news-desc__right
+      .news-desc__right-content
+        .news-desc__right-date 12.06.2020
+        .news-desc__title.title-with-linear Графік роботи відділу продажу на свята!
+          +svg('linear')
+        .news-desc__right-wrap
+          p.news-desc__right-text Графік роботи відділу продажу на новорічні свята!
+          p.news-desc__text 21 грудня - з 10:00 до 12:00
+          p.news-desc__text 30 грудня - з 10:00 до 17:00
+          p.news-desc__text 31 грудня та 1 січня - вихідні
+          p.news-desc__text 2, 3, 4, 5 січня - з 10:00 до 17:00
+          p.news-desc__text 6, 7 січня - вихідні
+          p.news-desc__right-text.news-desc__right-text--top Починаючи з 8 січня відділ продажу працюватиме взвичному режимі.
+  section.news-equal
+    .container.section
+      .news-equal__title.page-title Схожі новини
+      .news-equal__list.more.slider.offset-left
+        .slider__item.more__item
+          .more__img
+            .more__img-wrap
+              +img('more-img.png')
+            a(href="#").more__plus
+              .more__cross
+          .news__content
+            .news__date 12.06.2020
+            a(href="#").more__desc.news__desc Графік роботи відділу продажу на свята!
+            .news__intro Графік роботи відділу продажу на новорічні свята!
+        .slider__item.more__item
+          .more__img
+            .more__img-wrap
+              +img('more-img.png')
+            a(href="#").more__plus
+              .more__cross
+          .news__content
+            .news__date 12.06.2020
+            a(href="#").more__desc.news__desc Графік роботи відділу продажу на свята!
+            .news__intro Графік роботи відділу продажу на новорічні свята!
+        .slider__item.more__item
+          .more__img
+            .more__img-wrap
+              +img('more-img.png')
+            a(href="#").more__plus
+              .more__cross
+          .news__content
+            .news__date 12.06.2020
+            a(href="#").more__desc.news__desc Графік роботи відділу продажу на свята!
+            .news__intro Графік роботи відділу продажу на новорічні свята!
+
+
+  footer.footer
+    include ../includes/footer.pug
+
+
+block header
+  header.header.header--dark.header--bordered
+    include ../includes/header.pug
+block menu
+  include ../includes/menu.pug
+

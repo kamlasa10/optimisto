@@ -1,0 +1,164 @@
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Інфраструктура'
+    var id_page = 'infrastructure-page'
+    var color = "dark"
+    var decor = true
+
+block meta
+  title= 'Інфраструктура'
+  meta(name='description', content='')
+block head
+  link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9nfM9ITx5m84p5GxlRoXa24A6jBOFe3U&libraries=&v=weekly")
+  script(src='./assets/scripts/index.js')
+  script(src="./assets/scripts/infrastructure.js")
+
+block content
+  .fixed-content.fixed-content--end
+    .container
+      .socials.socials--fixed
+        .container
+          .socials__title © 2020 Smile Development
+          a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
+            +svg('inst')
+          a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
+            +svg('fb')
+      .fixed-content__triangle
+      .phone.phone--green
+        a.phone__link.phone__link--purple(href='tel:0442992203')
+          span.phone__text (044) 299-22-03
+          span.btn-round.phone__btn
+            +svg('phone')
+  section.infrastructure
+    .infrastructure__left
+        .infrastructure__left-content
+          .infrastructure__title Що знаходиться поруч
+          .infrastructure__list
+            div(data-infrastructure="airport").infrastructure__item.infrastructure__item--11
+              +svg('airoport')
+              span Аеропорт
+            div(data-infrastructure="metro").infrastructure__item.infrastructure__item--12
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0)">
+              <path d="M12.828 15L12.8 9.806L10.28 14.034H9.048L6.542 9.946V15H3.98V5.2H6.262L9.706 10.856L13.066 5.2H15.348L15.376 15H12.828Z" fill="white"/>
+              <circle cx="10" cy="10" r="9.5" stroke="white"/>
+              </g>
+              </svg>
+              span Метро
+            div(data-infrastructure="park").infrastructure__item.infrastructure__item--2
+              +svg('park')
+              span Парки
+            div(data-infrastructure="mall").infrastructure__item.infrastructure__item--3
+              +svg('mall')
+              span Торгово-розважальні комплекси
+            div(data-infrastructure="kinder-place").infrastructure__item.infrastructure__item--4
+              +svg('kinder-place')
+              span Дошкільні заклади
+            div(data-infrastructure="school").infrastructure__item.infrastructure__item--5
+              +svg('school')
+              span Школи
+            div(data-infrastructure="sport").infrastructure__item.infrastructure__item--6
+              +svg('sport')
+              span Фітнес центр
+        .infrastructure__left-wrap
+          a(href="#").infrastructure__btn.btn.btn--purple Обрати квартиру
+    .infrastructure__right
+  section.infrastructure-features
+    .infrastructure-features__decor
+      +img('group-2-leaflet.png')
+    .container
+      .infrastructure-features__wrap
+        .infrastructure-features__left.offset-left
+            .infrastructure-features__list
+                .infrastructure-features__item
+                  div(data-percent="70").infrastructure-features__item-progress
+                    <svg viewBox="0 0 130 150" class="progress-icon">
+                              <circle id="foo" cx="60" cy="60" r="60"/>
+                              <defs>
+                              </defs>
+                    </svg>
+                    .infrastructure-features__item-wrap
+                      .infrastructure-features__title 
+                        span.infrastructure-features__title-big 5
+                        span.infrastructure-features__title-small хв
+                      .infrastructure-features__item-text на авто
+                .infrastructure-features__item
+                  div(data-percent="70").infrastructure-features__item-progress
+                    <svg viewBox="0 0 130 150" class="progress-icon">
+                              <circle id="foo" cx="60" cy="60" r="60"/>
+                              <defs>
+                              </defs>
+                    </svg>
+                    .infrastructure-features__item-wrap
+                      .infrastructure-features__title 
+                        span.infrastructure-features__title-big 10
+                        span.infrastructure-features__title-small хв
+                      .infrastructure-features__item-text транспорт
+                .infrastructure-features__item
+                  div(data-percent="70").infrastructure-features__item-progress
+                    <svg viewBox="0 0 130 150" class="progress-icon">
+                              <circle id="foo" cx="60" cy="60" r="60"/>
+                              <defs>
+                              </defs>
+                    </svg>
+                  .infrastructure-features__item-wrap
+                    .infrastructure-features__title 
+                      span.infrastructure-features__title-big 20
+                      span.infrastructure-features__title-small хв
+                    .infrastructure-features__item-text пішки
+            .infrastructure-features__content
+              .infrastructure-features__text Лише 30 хвилин до серця Києва, до епіцентру всіх важливих подій.
+              .infrastructure-features__desc Жити у затишному передмісті та відчувати себе частиною бурхливого життя столиці. <span>Станція “Теремки”</span> на відстані 3,21 км від вашого будинку, а значить ви завжди потрапите вчасно на будь-яку зустріч.
+              .infrastructure-features__desc 5 хвилин — на авто, 10 — громадським транспортом. Або некваплива прогулянка пішки — 20 хвилин, і ви біля метро. 
+        .infrastructure-features__right
+          .infrastructure-features__img
+            +img('infastructure-features-img.png')
+  section.infrastructure-build
+    .infrastructure-build__decor
+      +img('group-leaflet.png')
+    .infrastructure-build__left
+      +img('infrastructure-build-img.png')
+    .infrastructure-build__right
+      .infrastructure-build__content
+        .infrastructure-features__text Внутрішня інфраструктура комплексу 
+        .infrastructure-features__desc Частина внутрішньої інфраструктури комплексу — <span> центр дитячого розвитку </span> для найменших. 10 хвилин пішки — садочки «Дзвіночок» та «Світ дитинства». Для школярів — 10 хвилин пішки до <span> школи «Квінта»</span>. 7 хвилин на авто до школи №44, 8 хвилин на авто до школи №132, 9 хвилин на авто до школи 269 з поглибленою французькою.
+  section.infrastructure-market
+    .infrastructure-market__decor
+      +img('group-2-leaflet.png')
+    .container
+      .infrastructure-market__left
+        .infrastructure-market__content
+          .infrastructure-features__text Заголовок про Мегамеркет та торговий центр
+          .infrastructure-features__desc <span>Мегамаркет</span> із великим асортиментом усього необхідного — 2 хвилини пішки. Це менше, ніж ваша улюблена пісня. Більше не потрібно складати довгі списки покупок і тягнути додому важкі пакети. І якщо не вистачає чогось під час приготування — це не зруйнує ваші плани на смачну вечерю. 
+          .infrastructure-features__desc Шопінг і розваги — по сусідству, у <span>торгово-розважальному центрі</span>. Сучасний кінотеатр з фудкортом, дитяча ігрова зона і галерея бутиків до ваших послуг. Вихідні у сімейному колі — повні радісних емоцій і вражень.
+      .infrastructure-market__right
+        +img('infrastructure-market-img.png')
+  section.infrastructure-intro
+    .container
+      .infrastructure-intro__wrap.offset-left
+        .infrastructure-intro__item
+          .infrastructure-intro__img 
+            +img('infrastructure-intro-img.png')
+          .infrastructure-intro__title Подорожувати — легко
+          .infrastructure-intro__desc 25 хвилин до <span> Міжнародного аеропорту “Київ”</span> у Жулянах, звідки прямісіньким рейсом до теплого моря або старовинних європейських міст.
+          a(href="#").infrastructure-intro__link.link-with-triangle Переглянут и карту
+        .infrastructure-intro__item
+          .infrastructure-intro__img 
+            +img('infrastructure-intro-img2.png')
+          .infrastructure-intro__title Природа надихає
+          .infrastructure-intro__desc Один із найкрасивіших <span> парків Києва “Феофанія”</span> — у 17 хвилинах їзди від комплексу. ВДНГ — зелений простір із крутими івентами — 15 хвилин транспортом. 
+        .infrastructure-intro__item
+          .infrastructure-intro__img 
+            +img('infrastructure-intro-img3.png')
+          .infrastructure-intro__title Бути в формі
+          .infrastructure-intro__desc Підтримувати гарну фізичну форму можна недалеко від дому в найкращих <span> мережевих фітнес-клубах</span>: фітнес-клуб Body Life, Sport Life з басейном та аквазоной, Sport Club Aelita та фітнес-студія FitCurves.
+
+block header
+  header.header.header--dark.header--bordered
+    include ../includes/header.pug
+block menu
+  include ../includes/menu.pug
+

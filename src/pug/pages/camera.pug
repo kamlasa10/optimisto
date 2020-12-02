@@ -1,0 +1,55 @@
+extends ../layout/main
+block variable
+    -
+        var title_page = 'Галерея'
+        var id_page = 'camera-page'
+        var breadcrumbsBtn = 'panorama'
+	
+block meta
+    title= 'Камеры'
+    meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+    script(src='./assets/scripts/index.js')
+    script(src="./assets/scripts/camera.js")
+
+block content
+    .fixed-content.fixed-content--end
+        .container
+            .socials.socials--fixed
+                .container
+                    .socials__title © 2020 Smile Development
+                    a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--inst
+                        +svg('inst')
+                    a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--fb
+                        +svg('fb')
+            .phone.phone--green
+                a.phone__link.phone__link--purple(href='tel:0442992203')
+                    span.phone__text (044) 299-22-03
+                    span.btn-round.phone__btn
+                        +svg('phone')
+    section.camera.section
+        .camera__decor
+            +svg('circle-linear')
+        include ../includes/breadcrumbs.pug
+        .container
+            .camera__wrap
+                .camera__tabs.offset-left
+                    div.camera__tab-block
+                        button(type="button" data-camera="1").camera__tab.btn.btn--purple Камера 1
+                    div.camera__tab-block
+                        button(type="button" data-camera="2").camera__tab.btn.btn--green Камера 2
+                    div.camera__tab-block
+                        button(type="button" data-camera="3").camera__tab.btn.btn--green Камера 3
+                .camera__content
+                    iframe(width="640" data-camera-content="1" height="480" src="https://rtsp.me/embed/894R3aKk/" frameborder="0" allowfullscreen)
+        footer.footer.footer--fixed
+            include ../includes/footer.pug
+
+block header
+    header.header.header--bordered
+        include ../includes/header.pug
+block menu
+    include ../includes/menu.pug
+

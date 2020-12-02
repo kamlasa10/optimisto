@@ -1,0 +1,223 @@
+.intro {
+    position: relative;
+    z-index: 7;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+
+    &-fixed-content {
+        @include to(1250px) {
+            .socials,
+            .fixed-content__triangle {
+                display: none;
+            }
+        }
+    }
+
+    &__wrap {
+        position: relative;
+        z-index: 10;
+        margin-top: 150px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all .4s;
+
+        .container {
+            padding-bottom: 70px;
+            position: relative;
+            width: 100%;
+            z-index: 5;
+            height: 100%;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        transition: .5s ease-in-out;
+    }
+
+    &__promo {
+        margin-left: 90px;
+        max-width: 530px;
+
+        @include to(770px) {
+            margin-left: 0;
+        }
+
+        @include to(480px) {
+            max-width: 400px;
+        }
+
+        @include to(375px) {
+            max-width: 300px;
+        }
+
+        @include to(320px) {
+            max-width: 220px;
+        }
+
+        &-status {
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 500;
+            color: #fff;
+        }
+    }
+
+    &__item {
+        position: relative;
+        min-height: 100vh;
+        display: flex !important;
+        transition: .5s ease-in-out;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            background: linear-gradient(73.08deg, rgba(21, 6, 34, 0.7) 0%, rgba(36, 10, 58, 0) 100%);
+        }
+    }
+
+    &__title {
+        color: #fff;
+        margin-bottom: 32px;
+        font-size: 65px;
+        line-height: 1em;
+        font-weight: 500;
+
+        @include to(1440px) {
+            font-size: 62px;
+        }
+
+        @include to(480px) {
+            font-size: 40px;
+            line-height: 1.3em;
+        }
+
+        @include to(375px) {
+            font-size: 34px;
+        }
+    }
+
+    &__btn {
+        margin-bottom: 72px;
+
+        @include to(480px) {
+            margin-bottom: 45px;
+        }
+    }
+
+    &__phone {
+        z-index: 5;
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        cursor: pointer;
+
+        &__link {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__socials {
+        position: absolute;
+        left: 0;
+        right: 0;
+        min-height: 100vh;
+        display: flex;
+
+		.container {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            margin-top: -0%;
+            align-items: center;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+        
+        &-list {
+            margin-top: -6%;
+            position: relative;
+            z-index: 5;
+            margin-right: 5px;
+
+            @include to(770px) {
+                margin-right: 10px;
+                margin-top: -12%;
+            }
+
+            @include to(480px) {
+                margin-top: 5%;
+            }
+        }
+
+		&__link {
+            display: flex;
+            flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+            cursor: pointer;
+
+			&:not(:last-child)::after {
+                content: "";
+                margin-bottom: 24px;
+				display: block;
+				height: 26px;
+				width: 1px;
+                background-color: #BCD7EF;
+                
+                @include to(480px) {
+                    display: none;
+                }
+			}
+
+			svg {
+                margin-bottom: 21px;
+				fill: #fff;
+            }
+            
+            &--viber {
+                svg {
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+
+            &--telegram {
+                svg {
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+
+            &--whatsapp {
+                svg {
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+
+            &--skype {
+                svg {
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+		}
+	}
+}

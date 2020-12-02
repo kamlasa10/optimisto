@@ -1,0 +1,41 @@
+.container
+	.header__wrap
+		.header__logo.logo
+			a(href="/")
+				if color === 'white'
+					+img('logo-white.svg')
+				else
+					+img('logo-dark.svg')
+		.header__right
+			.header__phone-mobile
+				a(href="tel:0442992203").phone__link.phone--green
+					span.btn-round.phone__btn
+						+svg('phone')
+				.header__phone-mobile-content
+					a(href="tel:0442992203").header__phone-mobile__link (044) 299-22-03
+					button(type="button").header__phone-mobile-btn заказать звонок
+			.header__right-list.header__right-list--bordered
+				.header__right-item.header__right-item-md-none
+					a(href="#").header__right-link
+						span.header__right-link-icon.header__right-link-icon--key.btn-round
+							+svg('key')
+						span.header__right-link-text Обрати квартиру
+				.header__right-item
+					a(href="./camera.html").header__right-link
+						span.header__right-link-icon.header__right-link-icon--camera.btn-round
+							+svg('camera')
+						span.header__right-link-text Web камера
+			.header__right-switcher
+				.header__language.language
+					span.language__decor
+					.language__current Укр
+					.language__select
+						.language__select-item.language__select-item--active Укр
+						.language__select-item Рус
+						.language__select-item Eng
+				button(type="button").header__burger-btn.burger-btn.btn-round.js-burger-btn
+					+svg('burger')
+
+
+				
+

@@ -1,0 +1,97 @@
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Про забудовника'
+    var id_page = 'creator-page'
+    var class_page = 'buy-page'
+    var color = "dark"
+    var decor = true
+
+block meta
+  title= 'Про забудовника'
+  meta(name='description', content='')
+block head
+  link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(src='./assets/scripts/index.js')
+  script(src="./assets/scripts/creator.js")
+
+block content
+  .fixed-content.fixed-content--end
+    .container
+      .socials.socials--fixed
+        .container
+          .socials__title © 2020 Smile Development
+          a(href="https://www.facebook.com/3mile.development").socials__link.socials__link--purple.socials__link--inst
+            +svg('inst')
+          a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
+            +svg('fb')
+      .fixed-content__triangle
+      .phone.phone--green
+        a.phone__link.phone__link--purple(href='tel:0442992203')
+          span.phone__text (044) 299-22-03
+          span.btn-round.phone__btn
+            +svg('phone')
+  section.creator
+    .creator__decor
+        +img('group-leaflet.png')
+    .container
+        .creator__inner-wrap
+            .creator__title.title-with-linear Надійний забудовник
+                +svg('linear')
+            .creator__content
+                .creator__left
+                    .creator__left-wrap
+                        .creator__title-small Девелоперська компанія Smile Development заснована у 2016 році.
+                        .creator__desc За роки роботи забудовник здобув гарну репутацію завдяки численним об’єктам комерційної нерухомості, виконаними за найкращими стандартами будівництва. Компанія управляє власними чистими активами сумою понад 17 мільярдів гривень. 
+                        .creator__mt
+                            .creator__title-small--2 Центральний офіс
+                            .creator__desc м. Київ, пр. Валерія Лобановського 56/21 БЦ "Star", 4 пов. оф. 402
+                .creator__right
+                    .creator__right-wrap
+                        .creator__logo
+                            +img('logo-creator.png')
+                        .creator__desc ЖК “Оптимісто” — перший житловий проект Smile Development. У ньому компанія реалізує задуми про безумовний комфорт мешканців, абсолютну безпеку та архітектурну довершеність. Над проектом працюють управлінці, юристи, маркетологи, інженерно-технічні спеціалісти, архітектори та інші спеціалісти із висококваліфікованої команди забудовника.
+                        .creator__mt
+                            a(href="http://smiledevelopment.com.ua/").creator__btn.btn.btn--purple Сайт забудовника
+  section.creator__more
+    .creator__more-block
+    .creator__more-decor-left
+        +img('creator-leaflet-group.png')
+    .more__leaflet
+        +img('leaflet-big-promo.png').more__leaflet-img
+    .more.buy__more.section
+        .container.offset-left
+            .more__wrap
+                .more__title Хочете дізнатись більше?
+                .more__list
+                    .more__item
+                        .more__img
+                            .more__img-wrap
+                                +img('more-img.png')
+                            a(href="#").more__plus
+                                .more__cross
+                        a(href="#").more__desc Квартири
+                    .more__item
+                        .more__img
+                            .more__img-wrap
+                                +img('more-img2.png')
+                            a(href="#").more__plus
+                                .more__cross
+                        a(href="#").more__desc Інфраструктура
+                    .more__item
+                        .more__img
+                            .more__img-wrap
+                                +img('more-img3.png')
+                            a(href="#").more__plus
+                                .more__cross
+                        a(href="#").more__desc Оточення
+    
+        footer.footer.footer--mt
+            include ../includes/footer.pug
+block header
+  header.header.header--dark
+    include ../includes/header.pug
+block menu
+  include ../includes/menu.pug
+

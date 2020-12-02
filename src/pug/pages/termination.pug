@@ -1,0 +1,113 @@
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Розтерминування'
+    var id_page = 'creator-page'
+    var class_page = 'termination-page'
+    var color = "dark"
+    var decor = true
+
+block meta
+  title= 'Про забудовника'
+  meta(name='description', content='')
+block head
+  link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(src='./assets/scripts/index.js')
+  script(src="./assets/scripts/creator.js")
+
+block content
+  .fixed-content.fixed-content--end
+    .container
+      .socials.socials--fixed
+        .container
+          .socials__title © 2020 Smile Development
+          a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
+            +svg('inst')
+          a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
+            +svg('fb')
+      .fixed-content__triangle
+      .phone.phone--green
+        a.phone__link.phone__link--purple(href='tel:0442992203')
+          span.phone__text (044) 299-22-03
+          span.btn-round.phone__btn
+            +svg('phone')
+  section.termination
+    .termination__decor
+        +img('group-leaflet.png')
+    .termination__left.offset-left
+        .termination__wrap
+            .termination__title.title-with-linear Квартира з розтермінуванням
+                +svg('linear')
+            .termination__small-title Квартира в ЖК ОПТИМІСТО з розтермінуванням і без переплати.
+            .termination__desc Компанія Smile development надає можливість придбати квартиру в ЖК ОПТИМІСТО з розтермінуванням і без переплати. Процедура отримання розстрочки проста — вам достатньо надати лише документи покупця (паспорт та код ІПН).
+    .termination__right
+        +img('termination-img.png')
+  section.termination-ipoteka.section
+    .termination-ipoteka__circle
+        .termination-ipoteka__circle-wrap
+            .termination-ipoteka__circle-round
+                .termination-ipoteka__circle-text 10%
+            .termination-ipoteka__circle-desc Розтермінування з першим внеском від 10% від базової вартості квартири.
+    .termination-ipoteka__content
+        .termination-ipoteka__content-wrap
+            .termination-ipoteka__title Проста процедура отримання розстрочки 
+            .termination-ipoteka__desc Для отримання розстрочки вам достатньо мати паспорт та код ІПН. Немає додаткових витрат на страхування житла та  життя покупця, дострокове погашення розтермінування можливе без штрафних санкцій, відсутні підтвердження платоспроможності покупця та поручителів. Підписання угоди та погодження умов відбувається миттєво!
+            .termination-ipoteka__desc Smile development турбується про кожного з покупців ЖК Оптимісто, тому пропонує лояльні умови розтермінування з першим внеском від 10% від базової вартості квартири.
+    .termination-ipoteka__small-circle
+  section.termination-period.section
+    .termination-period__img
+        +img('buy-bg.png')
+    .termination-period__content.offset-left
+        .termination-period__content-wrap
+            .termination-period__tittle.title-with-linear Період розтермінування
+                +svg('linear')
+            .termination-period__desc Період розтермінування варіюється в залежності від обраної черги будівництва та надається до моменту отримання документів на право власності покупцем. Це на півроку довше, ніж до отримання документів про введення в експлуатацію об'єкта. 
+            .termination-period__desc При оплаті першого внеску більше 30% від базової вартості квартири, діє програма лояльності: чим більша оплата першого внеску, тим дешевша в підсумку квартира. 
+            .termination-period__desc Не зволікайте, телефонуйте 044 229 55 77 — спеціаліст з продажу нерухомості розрахує найоптимальніший варіант саме для вас!
+            .termination-period__contacts
+                a(href="tel:0442992203").termination-period__contacts-phone
+                    +svg('phone-old')
+                    span.termination-period__contacts-text (044) 299-22-03
+                button(type="button").termination-period__contacts-btn.btn.btn--green.js-callback-form Замовити дзвінок
+  section.creator__more.more.termination-more
+    .creator__more-block
+    .creator__more-decor-left
+        +img('creator-leaflet-group.png')
+    .more__leaflet
+        +img('leaflet-big-promo.png').more__leaflet-img
+    .more.buy__more.section
+        .container.offset-left
+            .more__wrap
+                .more__title Хочете дізнатись більше?
+                .more__list
+                    .more__item
+                        .more__img
+                            .more__img-wrap
+                                +img('more-img.png')
+                            a(href="#").more__plus
+                                .more__cross
+                        a(href="#").more__desc Квартири
+                    .more__item
+                        .more__img
+                            .more__img-wrap
+                                +img('more-img2.png')
+                            a(href="#").more__plus
+                                .more__cross
+                        a(href="#").more__desc Інфраструктура
+                    .more__item
+                        .more__img
+                            .more__img-wrap
+                                +img('more-img3.png')
+                            a(href="#").more__plus
+                                .more__cross
+                        a(href="#").more__desc Оточення
+    
+        footer.footer.footer--mt
+            include ../includes/footer.pug
+block header
+  header.header.header--dark.header--bordered
+    include ../includes/header.pug
+block menu
+  include ../includes/menu.pug
+

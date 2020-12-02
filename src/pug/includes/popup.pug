@@ -1,0 +1,19 @@
+.overlay
+    form(action="#" method="post" data-form="true").callback-form.callback-form__popup.js-callback-form
+        +img('menu-decor.png').callback-form__decor
+        button(type="button").menu__right-close.callback-form__close.js-callback-form__close
+            span.menu__right-close-text Закрити
+            span.btn-round.menu__right-close-icon
+                +svg('cross')
+        .callback-form__content
+            .callback-form__title Замовити дзвінок
+            .callback-form__item
+                input(type="text" name="name" placeholder="Ваше ім’я").callback-form__input
+            .callback-form__item
+                input(type="tel" name="phone" placeholder="Ваш телефон").callback-form__input
+            .callback-form__item
+                input(type="checkbox" id="sure" placeholder="Ваш телефон" value="yes").callback-form__checkbox
+                label(for="sure").callback-form__custom-checkbox
+                .callback-form__text даю згоду на обробку персональних даних
+            .callback-form__block
+                button(type="submit").btn.btn--white.callback-form__btn.submit__form Відправити

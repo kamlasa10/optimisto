@@ -1,0 +1,245 @@
+.menu {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    display: none;
+    overflow-y: scroll;
+
+    @include to(480px) {
+        .phone__text {
+            display: block;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($purple, .8);
+        transition: all .4s;
+    }
+
+    &-decor1 {
+        position: absolute;
+        left: 27%;
+        top: 48%;
+        transform: translate(-41%,-50%);
+        width: 73%;
+        height: 100%;
+        z-index: 10;
+        object-fit: cover;
+        display: none;
+
+        @include to(1030px) {
+            width: 80%;
+        }
+
+        @include to(800px) {
+            display: none !important;
+        }
+    }
+
+    &-decor2 {
+        display: none;
+
+        @include to(800px) {
+            display: block;
+            position: absolute;
+            left: 27%;
+            top: 48%;
+            transform: translate(-26%, -42%);
+            width: 81%;
+            height: 51%;
+            z-index: 10;
+            object-fit: contain;
+        }
+
+        @include to(480px) {
+            display: block;
+            position: absolute;
+            left: 27%;
+            top: 48%;
+            transform: translate(-24%, -52%);
+            width: 99%;
+            height: 66%;
+            z-index: 10;
+            object-fit: cover;
+        }
+
+        @include to(375px) {
+            display: block;
+            position: absolute;
+            left: 27%;
+            top: 48%;
+            transform: translate(-27%, -56%);
+            width: 99%;
+            height: 55%;
+            z-index: 10;
+            object-fit: cover;
+        }
+    }
+
+    &__socials {
+        margin-top: auto;
+        position: absolute;
+        bottom: 0;
+    }
+
+    &__phone {
+        margin-top: auto;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        @include to(480px) {
+            bottom: 23px;
+        }
+    }
+
+    &__left {
+        transition: all 1s;
+        transition-timing-function: cubic-bezier(0.96, 0.7, 0.47, 0.47);
+        transform: translateX(-100%);
+        position: relative;
+        width: 50%;
+        background: url('../images/menu-bg.jpg') no-repeat center/cover;
+
+        &-logo {
+            margin-top: 19px;
+            width: 220px;
+            height: 73px;
+        }
+
+        @include to(800px) {
+            display: none;
+        }
+
+    }
+
+    &__right {
+        transition: all 1s;
+        transition-timing-function: cubic-bezier(0.96, 0.7, 0.47, 0.47);
+        background-color: $darkPurple;
+        width: 50%;
+        padding-left: 12%;
+        padding-right: 77px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(100%);
+
+        @include to(1440px) {
+            padding-left: 10%;
+            padding-right: 50px;
+        }
+
+        @include to(1370px) {
+            padding-right: 30px;
+        }
+
+        @include to(1030px) {
+            padding-left: 5%;
+        }
+
+        @include to(800px) {
+            width: 100%;
+            padding-right: 5%;
+        }
+
+        @include to(480px) {
+            padding: 0 10px;
+        }
+
+        &-top {
+            opacity: 0;
+            margin-top: 30px;
+            margin-bottom: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all .5s;
+
+            @include to(480px) {
+                padding-top: 21px;
+                margin-bottom: 21px;
+            }
+        }
+
+        &-title {
+            font-size: 38px;
+            line-height: 1.4em;
+            color: $green;
+            font-weight: 600;
+
+            @include to(1440px) {
+                font-size: 34px;
+            }
+
+            @include to(480px) {
+                font-size: 24px;
+            }
+        }
+
+        &-close {
+            border: none;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                svg {
+                    transform: rotate(90deg);
+                }
+
+                .menu__right-close-text {
+                    opacity: 0.7;
+                }
+
+                .menu__right-close-icon {
+                    background-color: darken($purple, 5%);
+                }
+            }
+
+            svg {
+                width: 28px;
+                height: 28px;
+                transition: all .4s;
+
+                @include to(480px) {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            &-text {
+                margin-right: 18px;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 2em;
+                color: #f4f4f2;
+
+                @include to(1440px) {
+                    font-size: 14px;
+                }
+
+                @include to(480px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &--animate {
+        transform: translateX(0%);
+    }
+}

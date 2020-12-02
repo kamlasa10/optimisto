@@ -1,0 +1,522 @@
+#infrastructure-page {
+
+    .header {
+        background-color: #fff;
+    }
+
+    .infrastructure {
+        padding-top: 120px;
+        height: 100vh;
+        display: flex;
+
+        &__title {
+            font-size: 23px;
+            line-height: 1.5em;
+            margin-bottom: 30px;
+            font-weight: 500;
+
+            @include to(1440px) {
+                font-size: 20px;
+            }
+        }
+
+        &__left {
+            width: 35%;
+            background-color: $light-purple;
+            padding: 50px 60px;
+            padding-right: 88px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+
+            @include to(1440px) {
+                padding-right: 27px;
+            }
+
+            &-content {
+                max-width: 400px;
+                margin-top: 15vh;
+
+                @include to(1440px) {
+                    margin-top: 0;
+                }
+            }
+
+            &-wrap {
+                width: 375px;
+                display: flex;
+                justify-content: flex-start;
+
+                @include to(1440px) {
+                    width: 341px;
+                }
+
+                .infrastructure__btn {
+                    padding-left: 25px;
+                    padding-right: 25px;
+                }
+            }
+        }
+
+        &__right {
+            width: 65%;
+        }
+
+        &__list {
+            margin-bottom: 50px;
+            padding-right: 50px;
+            height: 400px;
+            overflow-y: auto;
+
+            @include to(1440px) {
+                height: 370px;
+            }
+            
+            &::-webkit-scrollbar {
+                width: 2px;
+                background-color: $darkPurple;
+              }
+              
+              /* Track */
+              &::-webkit-scrollbar-track {
+                background: #f4f4f2;
+              }
+              
+              /* Handle */
+              &::-webkit-scrollbar-thumb {
+                background: $darkPurple;
+              }
+              
+              /* Handle on hover */
+              &::-webkit-scrollbar-thumb:hover {
+                background: darken($darkPurple, 5%);
+              }
+        }
+
+        &__item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all .4s;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            fill: #fff;
+
+            svg {
+                fill: #fff;
+                margin-right: 27px;
+            }
+
+            &--1 {
+                fill: transparent;
+
+                svg {
+                    fill: transparent;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            &--11 {
+                svg {
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+
+            &--12 {
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: transparent;
+                }
+            }
+
+            &--2 {
+                svg {
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+
+            &--3 {
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            &--4 {
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+
+            &--5 {
+                svg {
+                    width: 19px;
+                    height: 16px;
+                }
+            }
+
+            &--6 {
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            
+            &--active {
+                svg {
+                    fill: $purple;
+                }
+            }
+
+            &--active-metro {
+                svg {
+                    stroke: $purple;
+
+                    circle {
+                        stroke: $purple;
+                    }
+                }
+            }
+        }
+    }
+
+    .infrastructure-features {
+        background-color: #f4f4f2;
+
+        &__wrap {
+            min-height: 100vh;
+            align-items: center;
+            display: flex;
+
+        }
+
+        &__img {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 270px;
+                height: 270px;
+                border-radius: 50%;
+                background-color: $green;
+
+                @include to(1440px) {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+
+        &__left {
+            position: relative;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include to(1440px) {
+                width: 45%;
+            }
+        }
+
+        &__decor {
+            position: absolute;
+            top: 30%;
+            left: 0;
+        }
+
+        &__right {
+            width: 50%;
+            text-align: center;
+
+            img {
+                position: relative;
+                z-index: 1;
+                width: 80%;
+                object-fit: contain;
+
+                @include to(1440px) {
+                    width: 84%;
+                } 
+            }
+
+            @include to(1440px) {
+                width: 45%;
+            }
+        }
+
+        &__list {
+            margin-bottom: 43px;
+            display: flex;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #842990;
+            margin-right: 30px;
+            position: relative;
+
+            &-wrap {
+                position: absolute;
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &-progress {
+                position: absolute;
+                width: 116%;
+                height: 100%;
+                left: -10px;
+                top: -11px;
+                
+                svg {
+                    fill: transparent;
+                    
+                    circle {
+                        fill: none;
+                        width: 100%;
+                        height: 100%;
+                        stroke-width: 3px;
+                        stroke: $green;
+                        transform: translateX(4px) translateY(5px);
+                        transition: stroke-dasharray .4s ease;
+                    }
+                }
+            }
+
+            &-text {
+                font-weight: 500;
+                color: $purple;
+            }
+        }
+
+        &__title {
+            &-big {
+                margin-right: 2px;
+                font-size: 42px;
+                line-height: 1.3em;
+                color: $purple;
+                font-weight: 700;
+            }
+
+            &-small {
+                color: $purple;
+            }
+        }
+
+        &__content {
+            max-width: 354px;
+        }
+
+        &__text {
+            margin-bottom: 16px;
+            font-size: 24px;
+            line-height: 1.3em;
+            font-weight: 500;
+            color: $darkPurple;
+        }
+
+        &__desc {
+            margin-bottom: 25px;
+            color: $darkPurple;
+
+            span {
+                color: $green;
+                font-weight: 600;
+            }
+        }
+    }
+
+    
+    .infrastructure {
+        &-build {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+
+            &__decor {
+                position: absolute;
+                right: -3%;
+                top: 21%;
+            }
+
+            &__left {
+                width: 50%;
+                margin-right: 130px;
+
+                img {
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    transform: translateY(-6%) translateX(-2%);
+
+                    @include to(1440px) {
+                        transform: translateY(-10%) translateX(-2%);
+                    }
+                }
+
+                @include to(1370px) {
+                    width: 55%;
+                }
+            }
+
+            &__right {
+                display: flex;
+                width: 50%;
+                align-self: center;
+
+                @include to(1370px) {
+                    width: 45%;
+                }
+            }
+
+            &__content {
+                margin-top: -30px;
+                max-width: 430px;
+
+                @include to(1440px) {
+                    max-width: 335px;
+                }
+            }
+        }
+
+        &-market {
+            position: relative;
+            background-color: #f4f4f2;
+
+            .container {
+                min-height: 100vh;
+                display: flex;
+            }
+
+            &__decor {
+                position: absolute;
+                top: 42%;
+                left: 0;
+            }
+
+            &__left {
+                width: 40%;
+                align-self: center;
+                display: flex;
+                justify-content: center;
+
+                @include to(1440px) {
+                    margin-left: 95px;
+                    margin-right: 130px;
+                }
+            }
+
+            .infrastructure-features__text {
+                padding-right: 30px;
+            }
+
+            &__right {
+                position: relative;
+                width: 60%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    transform: translateY(-4%);
+
+                    @include to(1440px) {
+                        transform: translateY(-12%);
+                    }
+                }
+
+                &-decor {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+
+                    svg {
+                        width: 100vw;
+                        height: 100vh;
+                    }
+                }
+            }
+
+            &__content {
+                max-width: 420px;
+            }
+        }
+
+        &-intro {
+            .container {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+            }
+
+            &__wrap {
+                display: grid;
+                column-gap: 75px;
+                row-gap: 30px;
+                margin-right: 90px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            &__item {
+                img {
+                    margin-bottom: 31px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            &__title {
+                margin-bottom: 16px;
+                text-align: center;
+                font-size: 24px;
+                line-height: 1.4em;
+                font-weight: 500;
+            }
+
+            &__desc {
+                margin-bottom: 58px;
+                span {
+                    color: $purple;
+                    font-weight: 600;
+                }
+            }
+
+            &__link {
+                color: $purple;
+                border-bottom: 1px solid $purple;
+
+                &::before {
+                    border-left-color: $purple;
+                }
+            }
+        }
+    }
+}

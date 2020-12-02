@@ -1,0 +1,68 @@
+#location-page {
+  background-color: #e5e5ee;
+  color: $darkPurple;
+
+  .phone {
+    &__text {
+      color: $darkPurple;
+    }
+  }
+}
+.location {
+  &__content {
+    margin-bottom: 58px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__left {
+    margin-right: 130px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-title {
+      margin-bottom: 3px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.5em;
+    }
+
+    svg {
+      margin-top: 7px;
+    }
+
+    &--1 {
+      svg {
+        margin-right: 20px;
+        width: 17px;
+        height: 13px;
+        fill: $green;
+      }
+    }
+
+    &--2 {
+      svg {
+        margin-right: 24px;
+        width: 9px;
+        height: 13px;
+        fill: $purple;
+      }
+    }
+  }
+
+  &__map {
+    width: 100%;
+  }
+}
