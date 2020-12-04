@@ -4,6 +4,10 @@
     display: flex;
     align-items: center;
 
+    @include to(770px) {
+        margin-left: 0;
+    }
+
     &__item {
         position: relative;
         margin-right: 130px;
@@ -15,6 +19,14 @@
         &:hover .date__dropdown {
             opacity: 1;
             z-index: 5;
+        }
+
+        @include to(770px) {
+            margin-right: 70px;
+        }
+
+        @include to(480px) {
+            margin-right: 35px;
         }
     }
 

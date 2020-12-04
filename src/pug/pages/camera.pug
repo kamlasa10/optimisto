@@ -4,6 +4,7 @@ block variable
         var title_page = 'Галерея'
         var id_page = 'camera-page'
         var breadcrumbsBtn = 'panorama'
+        var decor = true
 	
 block meta
     title= 'Камеры'
@@ -24,7 +25,7 @@ block content
                         +svg('inst')
                     a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--fb
                         +svg('fb')
-            .phone.phone--green
+            .phone.phone--green.header__phone.js-header__phone
                 a.phone__link.phone__link--purple(href='tel:0442992203')
                     span.phone__text (044) 299-22-03
                     span.btn-round.phone__btn
@@ -48,7 +49,7 @@ block content
             include ../includes/footer.pug
 
 block header
-    header.header.header--bordered
+    header.header.header--bordered.header--dark
         include ../includes/header.pug
 block menu
     include ../includes/menu.pug

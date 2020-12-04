@@ -90,7 +90,7 @@ function server() {
     browserSync.init({
 				//server: paths.root,
 				notify: false,
-				proxy: "optimisto",
+				proxy: "optimisto-git",
     });
     browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
 }

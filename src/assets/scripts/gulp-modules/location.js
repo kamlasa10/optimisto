@@ -222,4 +222,8 @@
       icon: './assets/images/marker-building.svg'
     });
   })()
+
+  if(document.documentElement.clientWidth <= 480) {
+    $('.location__content').append($('.location__btn'))
+  }
 })(jQuery);

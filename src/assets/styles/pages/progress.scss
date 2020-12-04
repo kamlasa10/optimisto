@@ -4,6 +4,40 @@
     overflow: hidden;
     background-color: #e5e5ee;
 
+    .footer__decor {
+        display: none;
+    }
+
+    @include to(1025px) {
+        .fixed-content--end {
+            .container {
+                justify-content: space-between;
+            }
+        }
+
+        .footer--fixed {
+            z-index: 7;
+        }
+    }
+
+    @include to(770px) {
+        .progress {
+            min-height: 100vh;
+        }
+    }
+
+    @include to(480px) {
+        .link-with-triangle {
+            opacity: 0;
+            z-index: -1;
+        }
+
+        .footer__decor {
+            display: block;
+            top: -92px;
+        }
+    }
+
     .more {
         min-height: auto;
         background-color: transparent;

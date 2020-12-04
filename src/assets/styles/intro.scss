@@ -1,3 +1,12 @@
+#main-page {
+    .footer__decor {
+        @include to(1030px) {
+            margin-left: 10vw;
+        }
+    }
+}
+
+
 .intro {
     position: relative;
     z-index: 7;

@@ -5,6 +5,7 @@ block variable
         var id_page = 'progress-page'
         var breadcrumbsBtn = 'camera'
         var color = 'dark'
+        var decor = true
 	
 block meta
     title= 'Ход'
@@ -26,7 +27,7 @@ block content
                         +svg('inst')
                     a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
                         +svg('fb')
-            .phone.phone--green
+            .phone.phone--green.header__phone.js-header__phone
                 a.phone__link.phone__link--purple(href='tel:0442992203')
                     span.phone__text (044) 299-22-03
                     span.btn-round.phone__btn

@@ -12,4 +12,11 @@
     $('.js-tour__details-close').click(() => {
         $('.tour__details-content').removeClass('tour__details-content--show')
     })
+
+    // adaptive
+
+    if(document.documentElement.clientWidth <= 480) {
+        $('.footer').hide()
+        $('.fixed-content').hide()
+    }
 })(jQuery);

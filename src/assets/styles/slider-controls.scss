@@ -2,13 +2,19 @@
     display: flex;
 
     &__block {
+        position: relative;
         display: flex;
+        height: 42px;
         align-items: center;
         border-radius: 60px;
         min-width: 156px;
         padding-left: 24px;
         cursor: pointer;
-        transition: all .4s;
+        transition: all .6s;
+
+        @include to(800px) {
+            height: auto;
+        }
 
         @include to(800px) {
             background-color: #fff;
@@ -23,7 +29,11 @@
             background-color: #fff;
 
             span {
-                display: block;
+                opacity: 1;
+            }
+
+            .intro-controls__right {
+                left: calc(100% - 42px);
             }
         }
 
@@ -31,11 +41,12 @@
             font-family: $default-font;
             color: $purple;
             font-weight: 500;
-            display: none;
+            opacity: 0;
             transition: all .4s;
 
             @include to(800px) {
                 display: block;
+                opacity: 1;
             }
 
             @include to(480px) {
@@ -44,9 +55,16 @@
         }
 
         .intro-controls__right {
-            margin-left: auto;
+            transition: all .6s;
+            position: absolute;
+            left: 0;
             &::before {
                 transform: rotate(0deg);
+            }
+
+            @include to(770px) {
+                position: static;
+                margin-left: auto;
             }
         }
     }
