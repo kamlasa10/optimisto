@@ -27,6 +27,10 @@ body {
 	padding-top: 60px;
 }
 
+.wrapper {
+	overflow: hidden;
+}
+
 .section {
 	min-height: 100vh;
 	width: 100%;
@@ -383,7 +387,10 @@ body {
 	right: 0;
 	z-index: 8;
 
-	.phone {
+	.phone,
+	.phone--green {
+		display: flex;
+		align-items: flex-end;
 		align-self: flex-end;
 	}
 
@@ -395,6 +402,10 @@ body {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+
+		@include to(1025px) {
+			justify-content: flex-end;
+		}
 	}
 
 	&--end {
@@ -549,6 +560,10 @@ body {
 		display: flex;
 		justify-content: flex-end;
 	}
+
+	@include to(480px) {
+		padding-top: 90px;
+	}
 }
 
 .offset-left {
@@ -577,6 +592,11 @@ body {
 		color: #fff;
 		font-weight: 600;
 		max-width: 450px;
+
+		@include to(480px) {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
 	}
 
 	&__item {
@@ -584,6 +604,11 @@ body {
 		align-items: center;
 		position: relative;
 		margin-bottom: 42px;
+
+		@include to(480px) {
+			align-items: flex-start;
+			margin-bottom: 25px;
+		}
 
 		&-inner {
 			width: 100%;
@@ -612,6 +637,10 @@ body {
 			&:focus {
 				border-bottom: 1px solid darken(#98D259, 5%);
 			}
+
+			@include to(480px) {
+				width: calc(100% - 30px);
+			}
 		}
 
 		.callback-form__text {
@@ -621,6 +650,12 @@ body {
 			color: #f4f4f2;
 			font-weight: 600;
 			border-bottom: 1px solid #f4f4f2;
+
+			@include to(480px) {
+				width: 224px;
+				border: none;
+				text-decoration: underline;
+			}
 		}
 
 		label {
@@ -640,6 +675,10 @@ body {
 		border-radius: 50%;
 		background-color: #70A834;
 		transition: all .4s;
+
+		@include to(480px) {
+			margin-top: 8px;
+		}
 	}
 
 	.callback-form__checkbox:checked + .callback-form__custom-checkbox {
@@ -649,6 +688,10 @@ body {
 	&__block {
 		display: flex;
 		justify-content: flex-end;
+
+		@include to(480px) {
+			justify-content: center;
+		}
 
 		.callback-form__btn {
 			min-width: 178px;

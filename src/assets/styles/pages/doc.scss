@@ -1,5 +1,62 @@
 #doc-page {
+  overflow: hidden;
   background-color: $darkPurple;
+
+  @include to(1025px) {
+    .doc {
+      min-height: 100vh;
+    }
+    
+    .fixed-content {
+      .container {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  @include to(770px) {
+    .footer {
+      position: absolute;
+      bottom: 70px;
+    }
+
+    .fixed-content {
+      .socials {
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+
+    .offset-top {
+      padding-top: 120px;
+    }
+
+    .section {
+      padding-bottom: 0;
+    }
+  }
+
+  @include to(480px) {
+    .doc__link {
+      display: none;
+    }
+
+    .offset-top {
+      padding-top: 120px;
+    }
+
+    .date {
+      display: none;
+    }
+
+    .doc--left {
+      display: none;
+    }
+
+    .footer {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .doc {
@@ -51,6 +108,10 @@
 
   &__main {
     width: 70%;
+
+    @include to(480px) {
+      width: 100%;
+    }
   }
 
   &__item {
@@ -74,6 +135,14 @@
       margin-right: 93px;
       color: #3F2D4F;
       transition: all .4s;
+
+      @include to(480px) {
+        margin-right: 50px;
+      }
+
+      @include to(375px) {
+        margin-right: 30px;
+      }
     }
 
     &-title {
@@ -124,6 +193,10 @@
   &__title {
     color: #fff;
     margin-bottom: 39px;
+
+    @include to(480px) {
+      margin-bottom: 26px;
+    }
   }
 
   &__link {

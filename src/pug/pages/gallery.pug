@@ -4,6 +4,7 @@ block variable
 		var title_page = 'Галерея'
 		var id_page = 'gallery-page'
 		var color = "white"
+		var decor = true
 	
 block meta
 	title= 'Галерея'
@@ -15,6 +16,7 @@ block scripts
 	script(src="./assets/scripts/gallery.js")
 
 block content
+<<<<<<< HEAD
 	//- .fixed-content.fixed-content--end
 	//- 	.container
 	//- 		.socials.socials--fixed
@@ -56,6 +58,50 @@ block content
 					span.gallery__total 14
 		footer.footer.footer--fixed
 			include ../includes/footer.pug
+=======
+	.wrapper
+		.fixed-content.fixed-content--end
+			.container
+				.socials.socials--fixed
+					.container
+						.socials__title © 2020 Smile Development
+						a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--inst
+							+svg('inst')
+						a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--fb
+							+svg('fb')
+				.phone.phone--green.header__phone.js-header__phone
+					a.phone__link(href='tel:0442992203')
+						span.phone__text (044) 299-22-03
+						span.btn-round.phone__btn
+							+svg('phone')
+		section.gallery
+			.gallery__wrap
+				.gallery__item
+					+img('gallery-img.jpg')
+				.gallery__item
+					+img('gallery-img.jpg')
+				.gallery__item
+					+img('gallery-img.jpg')
+				.gallery__item
+					+img('gallery-img.jpg')
+				.gallery__item
+					+img('gallery-img.jpg')
+				.gallery__item
+					+img('gallery-img.jpg')
+				.gallery__item
+					+img('gallery-img.jpg')
+			.gallery__controls
+				.gallery__controls-wrap
+					button(type="button").gallery__controls-btn-left.gallery__controls-btn
+						span.gallery__current 01 /
+						span.gallery__total 14
+				.gallery__controls-wrap.gallery__controls-wrap--right
+					button(type="button").gallery__controls-btn-right.gallery__controls-btn
+						span.gallery__current 01 /
+						span.gallery__total 14
+			footer.footer.footer--fixed
+				include ../includes/footer.pug
+>>>>>>> d5aeabc598fb2dd7707825834757d842f8052fa4
 
 
 block header

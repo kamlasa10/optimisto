@@ -16,7 +16,25 @@ block scripts
     script(src="./assets/scripts/contacts.js")
 
 block content
+<<<<<<< HEAD
     .contacts.offset-top.section.gs_screen-trigger.gs_screen-trigger-first 
+=======
+    .fixed-content.fixed-content--end
+        .container
+            .socials.socials--fixed
+                .container
+                    .socials__title © 2020 Smile Development
+                    a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
+                        +svg('inst')
+                    a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
+                        +svg('fb')
+            .phone.phone--green.header__phone.js-header__phone
+                a.phone__link(href='tel:0442992203')
+                    span.phone__text (044) 299-22-03
+                    span.btn-round.phone__btn
+                        +svg('phone')
+    .contacts.offset-top.section
+>>>>>>> d5aeabc598fb2dd7707825834757d842f8052fa4
         .contacts__left
             +img('leaflet-small-promo.png').contacts__left-decor.gs_reveal.gs_reveal-fs-left
             .contacts__left-wrap

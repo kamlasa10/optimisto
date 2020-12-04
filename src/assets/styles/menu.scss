@@ -38,6 +38,7 @@
 
         @include to(1030px) {
             width: 80%;
+            transform: translate(-44%, -50%);
         }
 
         @include to(800px) {
@@ -149,6 +150,7 @@
 
         @include to(1030px) {
             padding-left: 5%;
+            padding-bottom: 20px;
         }
 
         @include to(800px) {

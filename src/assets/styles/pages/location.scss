@@ -7,6 +7,29 @@
       color: $darkPurple;
     }
   }
+
+  @include to(1025px) {
+    .fixed-content {
+      .container {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  @include to(770px) {
+    .fixed-content {
+      .socials {
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  @include to(480px) {
+    .offset-top {
+      padding-top: 80px;
+    }
+  }
 }
 .location {
   &__content {
@@ -14,22 +37,49 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @include to(480px) {
+      margin-bottom: 30px;
+      flex-direction: column;
+    }
+  }
+ 
+  @include to(480px) {
+    .location__btn {
+      align-self: flex-start;
+    }
   }
 
   &__left {
     margin-right: 130px;
+
+    @include to(770px) {
+      margin-right: 70px;
+    }
   }
 
   &__title {
     margin-bottom: 25px;
+
+    @include to(480px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__item {
     display: flex;
     margin-bottom: 25px;
 
+    @include to(480px) {
+      margin-bottom: 20px;
+    }
+
     &:last-child {
       margin-bottom: 0;
+
+      @include to(480px) {
+        margin-bottom: 20px;
+      }
     }
 
     &-title {

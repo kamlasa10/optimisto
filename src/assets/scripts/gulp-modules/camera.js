@@ -1,9 +1,6 @@
 @@include('./libs.js');
 
 (function ($) {
-    $('.header').addClass('header--dark')
-    const img = $('.header .logo img')
-    img.attr('src', './assets/images/logo-dark.svg')
 
     $('[data-camera]').each(function() {
         $(this).on('click', function() {
@@ -11,4 +8,10 @@
             $(this).addClass('btn--purple')
         })
     })
+
+    //adaptive
+
+    if(document.documentElement.clientWidth <= 770) {
+       $('.camera__wrap').append( $('.breadcrumbs .link-with-triangle'))
+    }
 })(jQuery);

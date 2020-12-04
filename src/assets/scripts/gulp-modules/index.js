@@ -351,17 +351,38 @@
 	function changeHeaderStyles(change) {
 		try {
 			if(change) {
-				$('.header').removeClass('header--dark')
 				const img = $('.header .logo img')
-	
-				img.attr('src', 'assets/images/logo-white.svg')
 				$('.phone__link').removeClass('phone__link--purple')
+
+				if(document.documentElement.clientWidth <= 770) {
+					$('.header').addClass('header--dark')
+					img.attr('src', 'assets/images/logo-dark.svg')
+				} else {
+					$('.header').removeClass('header--dark')
+					img.attr('src', 'assets/images/logo-white.svg')
+				}
+
+				if(document.documentElement.clientWidth <= 480) {
+					$('.footer__decor').hide()
+				}
+
 			} else {
 				$('.header').addClass('header--dark')
+
 				const img = $('.header .logo img')
 	
-				img.attr('src', 'assets/images/logo-white.svg')
 				$('.phone__link').addClass('phone__link--purple')
+
+				if(document.documentElement.clientWidth <= 775) {
+					$('.header').addClass('header--bg')
+					img.attr('src', 'assets/images/logo-dark.svg')
+				} else {
+					img.attr('src', 'assets/images/logo-white.svg')
+				}
+
+				if(document.documentElement.clientWidth <= 480) {
+					$('.footer__decor').show()
+				}
 			}
 		} catch(e) {}
 	}

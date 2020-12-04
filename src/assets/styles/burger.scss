@@ -8,4 +8,8 @@
             height: 11px;
         }
     }
+
+    @include to(480px) {
+        margin-left: 16px;
+    }
 }

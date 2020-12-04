@@ -45,6 +45,24 @@
                 slidesToShow: 3.4,
               }
             },
+            {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 2.8,
+                }
+              },
+              {
+                breakpoint: 770,
+                settings: {
+                  slidesToShow: 2.5,
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1.3,
+                }
+              },
           ]
     })
 
@@ -55,4 +73,16 @@
     $('.slider-control-right').click(() => {
         $('.slider__wrap').slick('slickNext')
     })
+
+    // adaptive
+
+    window.addEventListener('resize', () => {
+      if(document.documentElement.clientWidth <= 770) {
+        $('.header img').attr('src', './assets/images/logo-dark.svg')
+      }
+    })
+
+    if(document.documentElement.clientWidth <= 770) {
+      $('.header img').attr('src', './assets/images/logo-dark.svg')
+    }
 })(jQuery);

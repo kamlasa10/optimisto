@@ -3,6 +3,7 @@
 (function ($) {
     $('.gallery__wrap').on('init afterChange', (_, slick, currentSlide = 0) => {
         $('.gallery__controls-btn .gallery__current').text(`0${currentSlide + 1} /`)
+        $('.gallery__controls-btn-left .gallery__current').text(`0${currentSlide ? currentSlide : 1} /`)
         $('.gallery__controls-btn .gallery__total').text(` 0${slick.$slides.length}`)
     })
 
@@ -44,5 +45,11 @@
     $('.gallery__controls-btn-right').click(() => {
         $('.gallery__wrap').slick('slickNext')
     })
+
+    if(document.documentElement.clientWidth <= 480) {
+        $('.footer__decor').click(() => {
+            $('.gallery__wrap').slick('slickNext')
+        })
+    }
 
 })(jQuery);
