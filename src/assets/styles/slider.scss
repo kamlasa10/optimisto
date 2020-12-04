@@ -1,3 +1,35 @@
+#progress-page {
+    @include to(770px) {
+        .more {
+            padding-top: 30px;
+        }
+
+        .fixed-content {
+            .socials {
+                opacity: 0;
+            }
+        }
+
+        .progress {
+            overflow: hidden;
+        }
+
+        .more {
+            margin-top: 4vh;
+        }
+    }
+
+    @include to(480px) {
+        .breadcrumbs {
+            padding-top: 75px;
+        }
+
+        .more {
+            margin-top: 8vh;
+        }
+    }
+}
+
 .slider {
     &__item {
         cursor: pointer;
@@ -14,10 +46,18 @@
         margin-top: 15vh;
         .slick-track {
             padding-left: 140px;
+
+            @include to(770px) {
+                padding-left: 30px;
+            }
         }
 
         @include to(1440px) {
             margin-top: 6vh;
+        }
+
+        @include to(770px) {
+            padding-left: 0;
         }
     }
 
@@ -25,6 +65,11 @@
         right: -3px;
         width: 70px;
         height: 70px;
+
+        @include to(480px) {
+            width: 53px;
+            height: 53px;
+        }
     }
 
     .more__cross {
@@ -34,6 +79,26 @@
         @include to(1440px) {
             right: 15px;
             top: 22px;
+        }
+
+        @include to(770px) {
+            right: 31px;
+            top: 14px;
+
+            &::before,
+            &::after {
+                height: 25px;
+            }
+        }
+
+        @include to(480px) {
+            right: 26px;
+            top: 11px;
+
+            &::before,
+            &::after {
+                height: 18px;
+            }
         }
     }
 
@@ -65,10 +130,14 @@
 
     &__item {
         margin-right: 75px;
+
+        @include to(770px) {
+            margin-right: 30px;
+        }
     }
 
     &-control {
-        z-index: 7;
+        z-index: 9;
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -80,6 +149,18 @@
         border-radius: 50%;
         bottom: -400px;
         background-color: #fff;
+
+        @include to(1025px) {
+            bottom: -320px;
+        }
+
+        @include to(770px) {
+            bottom: -280px;
+        }
+
+        @include to(480px) {
+            display: none;
+        }
 
         &-btn {
             margin-top: 20px;

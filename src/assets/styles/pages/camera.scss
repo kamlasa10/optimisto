@@ -1,40 +1,45 @@
-@import './assets/vars';  // переменные
-@import './assets/smart-grid';  // mixins smartgrid.js
-// libraries
-@import './libs';
-
-// assets
-@import './assets/mixins';  // миксины
-@import './assets/fonts';  // шрифты
-@import './assets/base';  // общие стили
-@import './assets/animation';  // анимации
-@import './assets/class'; // main style
-@import './assets/interface'; // main style
-
-
-// sass dima
-@import './header';
-@import './footer';
-@import './404';
-@import './language.scss';
-@import './burger.scss';
-@import './socials.scss';
-@import './menu.scss';
-@import './navigation.scss';
-@import './phone.scss';
-@import './loader';
-
-
-
-
-
-
-
 // Styles
 
 #camera-page {
     position: relative;
     background-color: #E5E5E5;
+
+    .footer__decor {
+        display: none;
+
+        @include to(480px) {
+            display: block;
+            top: -92px;
+        }
+    }
+
+    @include to(1025px) {
+        .fixed-content {
+            .container {
+                justify-content: space-between;
+            }
+        }
+    }
+
+    @include to(770px) {
+        .fixed-content {
+            .socials {
+                display: none;
+            }
+
+            .container {
+                justify-content: flex-end;
+            }
+        }
+
+        .link-with-triangle {
+            align-self: flex-end;
+
+            @include to(480px) {
+                align-self: flex-start;
+            }
+        }
+    }
 
     .camera__decor {
         position: absolute;
@@ -53,34 +58,102 @@
                 width: 53vw;
                 height: 45vh;
             }
+
+            @include to(770px) {
+                width: 58vw;
+                height: 48vh;
+            }
+
+            @include to(480px) {
+                width: 90vw;
+                height: 32vh;
+            }
         }
     }
 }
 
 .camera {
+    @include to(770px) {
+        min-height: 100vh;
+    }
 
     &__wrap {
         position: relative;
         z-index: 2;
         display: flex;
+
+        @include to(770px) {
+            flex-direction: column;
+        }
     }
 
     &__tabs {
         margin-right: 74px;
+
+        @include to(770px) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 55px;
+
+            &.offset-left {
+                margin-left: 0;
+            }
+        }
+
+        @include to(480px) {
+            justify-content: flex-start;
+        }
     }
 
     &__tab-block {
         margin-bottom: 20px;
+
+        @include to(770px) {
+            margin-bottom: 0;
+        }
+
+        @include to(480px) {
+            margin-bottom: 10px;
+            margin-right: 10px;
+
+            .camera__tab {
+                min-width: calc(50vw - 20px);
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
     }
 
     &__content {
         width: 80%;
+
         iframe {
             width: 100%;
             height: 70vh;
 
             @include to(1440px) {
                 height: 63vh;
+            }
+        }
+
+        @include to(770px) {
+            width: 100%;
+            margin-bottom: 40px;
+
+            iframe {
+                height: 340px;
+            }
+        }
+
+        @include to(480px) {
+            order: -1;
+
+            iframe {
+                height: 201px;
             }
         }
     }

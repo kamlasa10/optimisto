@@ -106,7 +106,12 @@ html.has-scroll-dragging {
     @import "./pages/3d.scss";
     @import "./pages/genplan.scss";
 
-#index-page {
+#slider-page {
+    .fixed-content {
+        .container {
+            justify-content: space-between !important;
+        }
+    }
     .fixed-content__phone {
         right: 50px;
 

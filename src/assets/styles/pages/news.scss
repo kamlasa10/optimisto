@@ -1,12 +1,58 @@
 @import "./progress";
 
-.news-page {
-  .slider {
-    padding-bottom: 100px;
+#news-page {
+  @include to(1025px) {
+    .offset-top {
+      padding-top: 130px;
+    }
+  }
+
+  @include to(480px) {
+    .offset-top {
+      padding-top: 207px !important;
+    }
   }
 }
 
 .news {
+  @include to(1025px) {
+    min-height: 1500px;
+    margin-bottom: -50px;
+  }
+
+  @include to(480px) {
+    min-height: auto !important;
+  }
+}
+
+.news-page {
+
+  .slider {
+    padding-bottom: 100px;
+
+    @include to(1025px) {
+      padding-bottom: 100px;
+
+      &__item {
+        margin-right: 50px;
+      }
+    }
+  }
+}
+
+.news {
+
+  @include to(480px) {
+    .slider__wrap {
+      margin-top: -3vh !important;
+    }
+
+    .more__desc {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  }
+  
   &__content {
     position: relative;
     padding-left: 34px;

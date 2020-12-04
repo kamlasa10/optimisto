@@ -22,7 +22,7 @@ $offset_ss_one_side: ($offset_ss / 2);
 $offset_xs_one_side: ($offset_xs / 2);
 
 $fields: 30px;
-$fields_ss: 10px;
+$fields_ss: 15px;
 
 @mixin wrapper-full(){
     padding-left: $fields;

@@ -1,6 +1,76 @@
 #news-desc-page {
   color: $darkPurple;
 
+  .news-desc__btn {
+    display: none;
+  }
+
+  .footer__decor {
+    display: none;
+  }
+
+  @include to(1025px) {
+    .fixed-content {
+      .container {
+        justify-content: space-between;
+      }
+    }
+
+    .slider__item {
+      margin-right: 50px;
+
+      @include to(770px) {
+        margin-right: 0;
+
+        .more__plus {
+          right: 0;
+        }
+      }
+
+      @include to(480px) {
+        width: 297px !important;
+        margin-right: 30px;
+      }
+    }
+  }
+
+  @include to(770px) {
+    .fixed-content {
+      .socials {
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+
+    .news-desc {
+      padding-bottom: 50px;
+    }
+
+    .more {
+      padding-top: 0;
+    }
+  }
+
+  @include to(480px) {
+    .news-desc__btn {
+      display: block;
+    }
+
+    .title-with-linear {
+      margin-left: -50px;
+    }
+
+    .footer__decor {
+      display: block;
+      top: -92px;
+    }
+
+    .footer {
+      position: relative;
+      z-index: 5;
+    }
+  }
+
   .more {
     background-color: transparent;
   }
@@ -14,12 +84,25 @@
   .fixed-content__triangle {
     top: 20px;
     border-top-color: $text;
+
+    @include to(1025px) {
+      top: auto;
+      bottom: 20px;
+    }
+
+    @include to(770px) {
+      display: none;
+    }
   }
 
   .back {
     position: absolute;
     top: 180px;
     left: 0;
+
+    @include to(480px) {
+      top: 140px;
+    }
 
     &__link {
       text-decoration: none;
@@ -52,8 +135,17 @@
   .news-desc {
     display: flex;
 
+    @include to(480px) {
+      flex-direction: column;
+    }
+
     &__left {
       width: 55%;
+
+      @include to(480px) {
+        width: 100%;
+        display: flex;
+      }
 
       img {
         margin-top: -87px;
@@ -63,6 +155,22 @@
         width: 100%;
         height: calc(100% + 170px);
         object-fit: contain;
+
+        @include to(1025px) {
+          object-fit: cover;
+        }
+
+        @include to(770px) {
+          margin-top: -60px;
+          border-radius: 0;
+          margin-left: -10vw;
+          height: 100%;
+          clip-path: circle(46% at 34% 58%);
+        }
+
+        @include to(480px) {
+          clip-path: circle(54% at 58% 45%);
+        }
       }
     }
 
@@ -87,8 +195,24 @@
         padding-right: 150px;
       }
 
+      @include to(480px) {
+        margin-top: 70px;
+        margin-left: 62px;
+        margin-right: 15px;
+        padding-right: 0;
+        width: 100%;
+      }
+
       &-content {
         width: 405px;
+
+        @include to(770px) {
+          width: 300px;
+        }
+
+        @include to(480px) {
+          width: calc(100% - 60px - 15px);
+        }
       }
 
       &-date {
@@ -102,6 +226,10 @@
         @include to(1440px) {
           font-size: 14px;
           margin-left: -60px;
+        }
+
+        @include to(480px) {
+          margin-left: -50px;
         }
       }
 
@@ -120,6 +248,10 @@
     position: relative;
     background-color: #f4f4f2;
 
+    @include to(480px) {
+      background-color: #e5e5e5;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -130,6 +262,10 @@
       transform: translate(65%, 75%);
       background-color: #fff;
       border-radius: 50%;
+
+      @include to(770px) {
+        display: none;
+      }
     }
 
     .container {
@@ -137,6 +273,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      @include to(770px) {
+        min-height: auto;
+      }
     }
 
     &__title {
@@ -146,6 +286,10 @@
 
       @include to(1440px) {
         margin-top: 8vh;
+      }
+
+      @include to(480px) {
+        margin-top: 0;
       }
     }
 
@@ -163,6 +307,22 @@
 
       @include to(1440px) {
         padding-bottom: 50px;
+      }
+
+      @include to(770px) {
+        padding-bottom: 100px;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 50px;
+
+        &.offset-left {
+          margin-left: 0;
+        }
+      }
+
+      @include to(480px) {
+        padding-bottom: 50px;
+        grid-template-columns: 1fr;
+        column-gap: 30px;
       }
 
       .news__date {

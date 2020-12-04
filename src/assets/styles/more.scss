@@ -77,7 +77,8 @@
     margin-bottom: 20px;
 
     @include to(770px) {
-      bottom: 120px;
+      bottom: 25px;
+      margin-bottom: 0;
     }
 
     @include to(480px) {
@@ -128,7 +129,6 @@
 
     @include to(770px) {
       min-height: auto;
-      padding-bottom: 120px;
     }
 
     @include to(480px) {
