@@ -121,4 +121,8 @@
         $('.promo__left').before($('.promo__title'))
         $('.promo').append($('.promo__right-decor'))
     }
+
+
+    
+   
 })(jQuery)

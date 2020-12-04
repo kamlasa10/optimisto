@@ -16,29 +16,29 @@ block scripts
   script(src="./assets/scripts/nuy.js")
 
 block content
-  .fixed-content.fixed-content--end
-    .container
-      .socials.socials--fixed
-        .container
-          .socials__title © 2020 Smile Development
-          a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
-            +svg('inst')
-          a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
-            +svg('fb')
-      .fixed-content__triangle
-      .phone.phone--green
-        a.phone__link.phone__link--purple(href='tel:0442992203')
-          span.phone__text (044) 299-22-03
-          span.btn-round.phone__btn
-            +svg('phone')
-  section.buy.section.offset-top
+  //- .fixed-content.fixed-content--end
+  //-   .container
+  //-     .socials.socials--fixed
+  //-       .container
+  //-         .socials__title © 2020 Smile Development
+  //-         a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
+  //-           +svg('inst')
+  //-         a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
+  //-           +svg('fb')
+  //-     .fixed-content__triangle
+  //-     .phone.phone--green
+  //-       a.phone__link.phone__link--purple(href='tel:0442992203')
+  //-         span.phone__text (044) 299-22-03
+  //-         span.btn-round.phone__btn
+  //-           +svg('phone')
+  section.buy.section.offset-top.gs_screen-trigger.gs_screen-trigger-first 
     .buy__img
         +img('buy-bg.png')
     .container
         .buy__content.offset-left
-            .buy__title.title-with-linear Для тих, хто придбав
+            .buy__title.title-with-linear.gs_reveal.gs_reveal-fs-title Для тих, хто придбав
                 +svg('linear')
-            .buy__content-wrap
+            .buy__content-wrap.gs_reveal.gs_reveal-fs-title
                 p.buy__desc Вітаємо вас у кварталі позитивних людей “Оптимісто”! Якщо вам потрібна допомога після купівлі квартири, звертайтеся до відділу сервісу. 
                 p.buy__desc Наші менеджери допоможуть вирішити усі питання, починаючи з моменту придбання нерухомості до оформлення права власності. Відділу сервісу працює з понеділка по п’ятницю з 10.00 до 19.00. В цей час з менеджером можна зв’язатися:
                 ul.buy__list
@@ -54,13 +54,13 @@ block content
                         .buy__item-right
                             p.buy__item-text Зателефонувати за номером:
                             a(href="tel:0442992203").buy__item-link (044) 299-22-03
-  section.more.buy__more.section
-    .more__leaflet
+  section.more.buy__more.section.gs_screen-trigger
+    .more__leaflet.gs_reveal.gs_reveal-right
         +img('leaflet-big-promo.png').more__leaflet-img
     .container
         .more__wrap
-            .more__title Хочете дізнатись більше?
-            .more__list
+            .more__title.gs_reveal.gs_reveal-title Хочете дізнатись більше?
+            .more__list.gs_reveal.gs_reveal-opacity
                 .more__item
                     .more__img
                         .more__img-wrap

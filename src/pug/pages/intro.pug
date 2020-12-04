@@ -31,18 +31,18 @@ block content
 						span.phone__text (044) 299-22-03
 						span.btn-round.phone__btn
 							+svg('phone')
-		section.promo.offset-header.section
+		section.promo.offset-header.section.gs_screen-trigger.gs_screen-trigger-first
 			.promo__left
-				.promo__left-decor
+				.promo__left-decor.gs_reveal.gs_reveal-fs-left
 					+img('leaflet-small-promo.png')
-				.promo__left-content
+				.promo__left-content.gs_reveal.gs_reveal-fs-text
 					.promo__small-title Затишналокація у парковій зоні
 					.promo__desc Ваші сусіди — це позитивні люди зі схожими інтересами. Познайомитись ближче ви зможете за спільними активностями: в ЖК облаштовані бігові.
 					a(href="#").promo__link.link-with-triangle Про концепцію
 			.promo__right
-				.promo__right-decor
+				.promo__right-decor.gs_reveal.gs_reveal-fs-right
 					+img('leaflet-big-promo.png')
-				.promo__title.title-with-linear Знайти свій <br> життєвий баланс
+				.promo__title.title-with-linear.gs_reveal.gs_reveal-fs-title Знайти свій <br> життєвий баланс
 					+svg('linear')
 				.promo__video
 					+img('Exclude-promo.svg').promo__video--decor
@@ -50,24 +50,24 @@ block content
 						source(src="static/promo-video.mp4" type="video/mp4")
 						source(src="static/promo-video.webm" type="video/webm")
 						source(src="static/promo-video.ogg" type="video/ogg")
-		section.balance.section
-			.balance__decor
+		section.balance.section.gs_screen-trigger
+			.balance__decor.gs_reveal.gs_reveal-right
 				+img('group-leaflet.png')
 			.container
 				.balance__content
-					.balance__title.title-with-linear Знайти свій життєвий баланс
+					.balance__title.title-with-linear.gs_reveal.gs_reveal-title Знайти свій життєвий баланс
 						+svg('linear')
 					.balance__list
 						.balance__item Ваші сусіди — це позитивні люди зі схожими інтересами. Познайомитись ближче ви зможете за спільними активностями: в ЖК облаштовані бігові й вело доріжки.
 						.balance__item Ваші сусіди — це позитивні люди зі схожими інтересами. Познайомитись ближче ви зможете за спільними активностями: в ЖК облаштовані бігові й вело доріжки.
 					a(href="#").balance__link.link-with-triangle Обрати квартиру
-		section.features
+		section.features.gs_screen-trigger
 			.more__circle-top
 			div.features__wrap
 				.features__item
 					.features__left
 						.features__content
-							.features__title.title-with-linear Переваги комплексу
+							.features__title.title-with-linear.gs_reveal.gs_reveal-title Переваги комплексу
 								+svg('linear')
 							.features__small-title Мега маркет біля дому
 							.features__desc Метро знаходиться на відстані в 3,21 км від комплексу. Це 5 хвилин на авто, 10 хвилин на транспорті.
@@ -94,12 +94,12 @@ block content
 									button(type="button").slider-controls__right.features-controls__right.btn.btn--with-triangle Наступна
 					.features__right
 						+img('features-img.png')
-		section.more
-			.more__leaflet
+		section.more.gs_screen-trigger
+			.more__leaflet.gs_reveal.gs_reveal-right
 				+img('leaflet-big-promo.png')
 			.container.offset-left
 				.more__wrap
-					.more__title Хочете дізнатись більше?
+					.more__title.gs_reveal.gs_reveal-title Хочете дізнатись більше?
 					.more__list
 						.more__item
 							.more__img

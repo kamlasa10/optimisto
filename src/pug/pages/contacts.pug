@@ -16,25 +16,11 @@ block scripts
     script(src="./assets/scripts/contacts.js")
 
 block content
-    .fixed-content.fixed-content--end
-        .container
-            .socials.socials--fixed
-                .container
-                    .socials__title © 2020 Smile Development
-                    a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
-                        +svg('inst')
-                    a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
-                        +svg('fb')
-            .phone.phone--green
-                a.phone__link(href='tel:0442992203')
-                    span.phone__text (044) 299-22-03
-                    span.btn-round.phone__btn
-                        +svg('phone')
-    .contacts.offset-top.section
+    .contacts.offset-top.section.gs_screen-trigger.gs_screen-trigger-first 
         .contacts__left
-            +img('leaflet-small-promo.png').contacts__left-decor
+            +img('leaflet-small-promo.png').contacts__left-decor.gs_reveal.gs_reveal-fs-left
             .contacts__left-wrap
-                .contacts__title Відділ продажу
+                .contacts__title.gs_reveal Відділ продажу
                 .contacts__list
                     .contacts__list-item.contacts__list-item--1
                         a(href="tel:0442992203").contacts__list-link
@@ -52,7 +38,7 @@ block content
                             .contacts__list-item-block 
                                 span 10 : 00 – 17 : 00      
                                 span сб-нд
-        .contacts__right
+        .contacts__right.gs_reveal.gs_reveal-fs-right
             +img('menu-decor.png').contacts__decor
             form(action="#" method="post" data-form="true").callback-form
                 .callback-form__title Форма зворотнього зв′язку

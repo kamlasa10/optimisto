@@ -16,42 +16,42 @@ block scripts
   script(src="./assets/scripts/company.js")
 
 block content
-  .fixed-content.fixed-content--end
-    .container
-      .socials.socials--fixed
-        .container
-          .socials__title © 2020 Smile Development
-          a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
-            +svg('inst')
-          a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
-            +svg('fb')
-      .fixed-content__triangle
-      .phone.phone--green
-        a.phone__link.phone__link--purple(href='tel:0442992203')
-          span.phone__text (044) 299-22-03
-          span.btn-round.phone__btn
-            +svg('phone')
-  section.company
+  //- .fixed-content.fixed-content--end
+  //-   .container
+  //-     .socials.socials--fixed
+  //-       .container
+  //-         .socials__title © 2020 Smile Development
+  //-         a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
+  //-           +svg('inst')
+  //-         a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
+  //-           +svg('fb')
+  //-     .fixed-content__triangle
+  //-     .phone.phone--green
+  //-       a.phone__link.phone__link--purple(href='tel:0442992203')
+  //-         span.phone__text (044) 299-22-03
+  //-         span.btn-round.phone__btn
+  //-           +svg('phone')
+  section.company.gs_screen-trigger.gs_screen-trigger-first 
     .company__left.offset-left
         .company__left-content
-            .company__title.title-with-linear Управляюча компанія
+            .company__title.title-with-linear.gs_reveal.gs_reveal-fs-title Управляюча компанія
                 +svg('linear')
-            .company__left-wrap
+            .company__left-wrap.gs_reveal.gs_reveal-fs-title
                 .company__desc Власна експлуатаційна компанія ЖК “Оптимісто” не залишить вас наодинці з побутовими клопотами. З моменту оформлення права власності на квартиру ви отримуєте винятковий сервіс і допомогу в усіх справах. 
                 .company__desc Управляюча компанія надає послуги під час заселення та при експлуатації квартири. Ремонтні роботи, комунальні послуги, обслуговування території — вам гарантується сервісне обслуговування найвищого рівня.
     .company__right
         +img('company-img.png')
     .company__left-decor
         +img('two-leaflet.png')
-    .company__decor
+    .company__decor.gs_reveal.gs_reveal-fs-left
         +img('group-leaflet.png')
-  section.more.buy__more.section
-    .more__leaflet
+  section.more.buy__more.section.gs_screen-trigger
+    .more__leaflet.gs_reveal.gs_reveal-right
         +img('leaflet-big-promo.png').more__leaflet-img
     .container
         .more__wrap
-            .more__title Хочете дізнатись більше?
-            .more__list
+            .more__title.gs_reveal.gs_reveal-title Хочете дізнатись більше?
+            .more__list.gs_reveal.gs_reveal-opacity
                 .more__item
                     .more__img
                         .more__img-wrap

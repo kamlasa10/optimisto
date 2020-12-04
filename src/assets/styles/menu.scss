@@ -4,7 +4,7 @@
     position: fixed;
     z-index: 50;
     display: none;
-    overflow-y: scroll;
+    overflow: hidden;
 
     @include to(480px) {
         .phone__text {

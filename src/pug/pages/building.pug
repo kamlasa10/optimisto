@@ -16,72 +16,72 @@ block scripts
   script(src="./assets/scripts/bulding.js")
 
 block content
-  .fixed-content.fixed-content--end
-    .container
-      .socials.socials--fixed
-        .container
-          .socials__title © 2020 Smile Development
-          a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
-            +svg('inst')
-          a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
-            +svg('fb')
-      .fixed-content__triangle
-      .phone.phone--green
-        a.phone__link.phone__link--purple(href='tel:0442992203')
-          span.phone__text (044) 299-22-03
-          span.btn-round.phone__btn
-            +svg('phone')
-  section.promo.offset-header.section.building
+  //- .fixed-content.fixed-content--end
+  //-   .container
+  //-     .socials.socials--fixed
+  //-       .container
+  //-         .socials__title © 2020 Smile Development
+  //-         a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
+  //-           +svg('inst')
+  //-         a(href="https://www.instagram.com/optimisto.com.ua/?hl=ru").socials__link.socials__link--purple.socials__link--fb
+  //-           +svg('fb')
+  //-     .fixed-content__triangle
+  //-     .phone.phone--green
+  //-       a.phone__link.phone__link--purple(href='tel:0442992203')
+  //-         span.phone__text (044) 299-22-03
+  //-         span.btn-round.phone__btn
+  //-           +svg('phone')
+  section.promo.offset-header.section.building.gs_screen-trigger.gs_screen-trigger-first
     .promo__left
-        .promo__left-decor
+        .promo__left-decor.gs_reveal.gs_reveal-fs-left
             +img('leaflet-small-promo.png')
-        .promo__left-content
+        .promo__left-content.gs_reveal.gs_reveal-fs-text
             .promo__small-title Квартал позитивних людей
             .promo__desc Квартал позитивних людей “Оптимісто” будується у Гатному, Київська область. Розташування комплексу забезпечує доступність усіх важливих локацій — поряд Одеське шосе та зупинки громадського транспорту. Станція метро “Теремки” — 5 хвилин на авто. 
     .promo__right
-        .promo__right-decor
+        .promo__right-decor.gs_reveal.gs_reveal-fs-right
             +img('leaflet-big-promo.png')
-        .promo__title.title-with-linear Про комплекс
+        .promo__title.title-with-linear.gs_reveal.gs_reveal-fs-title Про комплекс
             +svg('linear')
         .promo__video
             +img('Exclude-promo.svg').promo__video--decor
             +img('building-img.png').promo__video-img
-  section.building-security.section
-    .building-security__decor
+  section.building-security.section.gs_screen-trigger
+    .building-security__decor.gs_reveal.gs_reveal-right
         +img('group-leaflet.png')
     .container
         .building-security__left
             .building-security__img
-                +img('bulding-security-img.png').building-security__img-big
-                +img('camera-img.png').building-security__img-camera
-                .building-security__img-circle
+                +img('bulding-security-img.png').building-security__img-big.gs_security.gs_security_building
+                +img('camera-img.png').building-security__img-camera.gs_security.gs_security_camera
+                .building-security__img-circle.gs_security.gs_security_circle
         .building-security__right 
-            .building-security__right-content
+            .building-security__right-content.gs_reveal.gs_reveal-title
                 .building-security__title Безпека — понад усе
                 .bulding-security__desc Дбаючи про спокій мешканців, двір буде закрито від автомобілів. Безпека — понад усе, і тому запроваджено карткову систему входу/виходу у житловий комплекс, будинки знаходяться під охороною і цілодобовим відеоспостереженням.
-  section.building-functional.section
-    .building-functional__circle
+  section.building-functional.section.gs_screen-trigger
+    .building-functional__circle.gs_reveal.gs_reveal-left
         +img('two-leaflet.png')
-    .building-functional__decor
+    .building-functional__decor.gs_reveal.gs_reveal-left
         +img('leaflet-small-promo.png')
-    .building-functional__img
+    .building-functional__img.gs_reveal.gs_reveal-opacity
         +img('building-functional-img.png')
     .container
-        .building-functional__title.title-with-linear Функціональні <br> зони кварталу
+        .building-functional__title.title-with-linear.gs_reveal.gs_reveal-title Функціональні <br> зони кварталу
             +svg('linear')
-        .building-functional__content
+        .building-functional__content.gs_reveal.gs_reveal-text2
             .building-functional__desc Внутрішній простір кварталу поділений на функціональні зони: прогулянкову променаду з фонтаном, ігрові зони для дітей різного віку, місця для відпочинку. Насичена інфраструктура поруч із будинками доповнюється власною інфраструктурою
             .building-function__desc Перші поверхи призначені для комерційних приміщень. Улюблена кав’ярня, салон краси, відділення пошти — все потрібне під рукою. Для найменших на території комплексу буде облаштований центр дитячого розвитку. 
-  section.building-attention.section
-    .building-attention__right-decor
+  section.building-attention.section.gs_screen-trigger
+    .building-attention__right-decor.gs_reveal.gs_reveal-right
       +img('group-leaflet.png')
-    .building-attention__left-decor
+    .building-attention__left-decor.gs_reveal.gs_reveal-left
         +img('group-2-leaflet.png')
     .container
-        .building-attention__left.offset-left
+        .building-attention__left.offset-left.gs_reveal.gs_reveal-opacity
             +img('attention-img.png')
         .building-attention__right
-            .building-attention__right-content
+            .building-attention__right-content.gs_reveal.gs_reveal-title
                 .building-attention__title.title-with-linear Приділено увагу <br> кожній деталі
                     +svg('linear')
                 .building-attention__small-title.section-small-title Пріоритет девелопера — якість будівництва і комфорт мешканців.

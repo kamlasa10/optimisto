@@ -14,7 +14,8 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	z-index: 30;
+	z-index: 3;
+	position: relative;
 	.page__content {
 		flex-grow: 1;
 	}
@@ -428,6 +429,62 @@ body {
 		@include to(480px) {
 			display: none;
 		}
+	}
+}
+
+.fixed-content.purple-white{
+	.socials__link{
+		svg{
+
+				fill: #842990;
+
+		}
+	}
+	
+	.phone__text{
+		color: white;
+	}
+}
+
+.fixed-content.purple{
+	.socials__link{
+		svg{
+
+				fill: #842990;
+
+		}
+	}
+
+	.phone__text{
+		color: #240a3a;
+	}
+}
+
+.fixed-content.white{
+	.socials__link{
+		svg{
+
+				fill: #c9c2c2;
+			
+		}
+	}
+
+	.phone__text{
+		color: white;
+	}
+}
+
+.fixed-content.white-purple{
+	.socials__link{
+		svg{
+
+				fill: #c9c2c2;
+			
+		}
+	}
+
+	.phone__text{
+		color: #240a3a;
 	}
 }
 

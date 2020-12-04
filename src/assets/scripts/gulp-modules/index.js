@@ -35,6 +35,10 @@
 
 		ScrollTrigger.refresh();
 
+		gsap.config({
+			force3D: false,
+		});
+
 	(function() {
 
 		$('.js-header__phone').click(e => {
@@ -55,6 +59,7 @@
 		})
 
 		$('.js-burger-btn').click(() => {
+			$('.header').css('z-index', '-1')
 			$('.menu').css('display', 'flex')
 			setTimeout(() => {
 				$('.menu__left').addClass('menu--animate')
@@ -69,6 +74,7 @@
 		  })
 		
 		  $('.js-menu__right-close').click(() => {
+				
 			setTimeout(() => {
 				$('.menu__left').removeClass('menu--animate')
 				$('.menu__right').removeClass('menu--animate')
@@ -77,6 +83,7 @@
 					$('.menu-decor1').css('display', 'none')
 					$('.menu__right-top').removeClass('show-animate')
 					$('.navigation').removeClass('show-animate')
+					$('.header').css('z-index', '10')
 					$('.menu').css('display', 'none')
 				}, 600)
 			}, 50) 
@@ -456,6 +463,195 @@
 	
 	  if(document.documentElement.clientWidth <= 480) {
 		$('.header__language')[0].insertAdjacentElement('afterend', $('.header__phone')[0])
-	  }
+		}
+		
+
+
+
+
+		const animateFrom = function(elem, direction) {
+      direction = direction | 1;
+      
+      var x = 0,
+          y = direction * 100;
+          const obj = {
+            // paused: true,
+          }
+          const tl = gsap.timeline(obj);
+      if (elem.classList.contains('gs_reveal-title')){
+        tl.fromTo(elem, {x: x, y: -100, 	autoAlpha: 0}, {
+          duration: 2, 
+          x: 0,
+          y: 0, 
+          autoAlpha: 1,
+          ease: "expo", 
+          overwrite: "auto",
+        });
+      } else if (elem.classList.contains('gs_reveal-text')) {
+        tl.fromTo(elem, {x: x, y: "+5%"}, {
+          duration: 3, 
+          x: 0,
+          y: 0, 
+          ease: "expo", 
+          overwrite: "auto"
+        });
+      } else if(elem.classList.contains('gs_reveal-fs-text')){
+        gsap.set(elem, {y: 100, autoAlpha: 0})
+        gsap.fromTo(elem, {x: x, y: 100, autoAlpha: 0}, {
+          duration: 2, 
+          x: 0,
+          y: 50, 
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
+				});
+				tl.fromTo(elem, {x: x, y: 50, autoAlpha: 1}, {
+          duration: 2, 
+          x: 0,
+          y: 0, 
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
+				});
+				
+      } else if(elem.classList.contains('gs_reveal-text2')){
+				tl.fromTo(elem, {x: x, y: 50, autoAlpha: 1}, {
+          duration: 2, 
+          x: 0,
+          y: 0, 
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
+				}) 
+			} else if(elem.classList.contains('gs_reveal-fs-title')){
+        gsap.set(elem, {y: -100, autoAlpha: 0})
+        gsap.fromTo(elem, {x: x, y: -100, autoAlpha: 0}, {
+          duration: 2, 
+          x: 0,
+          y: -50, 
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
+				});
+				tl.fromTo(elem, {x: x, y: -50, autoAlpha: 1}, {
+          duration: 2, 
+          x: 0,
+          y: 0, 
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
+        });
+      }else if(elem.classList.contains('gs_reveal-fs-left')){
+        gsap.set(elem, {x: 0, autoAlpha: 0})
+        gsap.fromTo(elem, {x: -100, y: 0, autoAlpha: 0}, {
+          duration: 2, 
+          x: 0,
+          y: 0, 
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
+				});
+				tl.fromTo(elem, {x: 0, y: 0, autoAlpha: 1}, {
+          duration: 2, 
+          x: -100,
+          y: 0, 
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
+        });
+      }else if(elem.classList.contains('gs_reveal-left')){
+        tl.fromTo(elem, {x: -100, y: 0, autoAlpha: 0}, {
+          duration: 2, 
+          x: 0,
+          y: 0, 
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
+        });
+      }else if(elem.classList.contains('gs_reveal-fs-right')){
+        gsap.set(elem, {x: 0, autoAlpha: 0})
+        gsap.fromTo(elem, {x: 100, y: 0, autoAlpha: 0}, {
+          duration: 2, 
+          x: 0,
+          y: 0, 
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
+				});
+				tl.fromTo(elem, {x: 0, y: 0, autoAlpha: 1}, {
+          duration: 2, 
+          x: 100,
+          y: 0, 
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
+        });
+      }else if(elem.classList.contains('gs_reveal-right')){
+        tl.fromTo(elem, {x: 100, y: 0, autoAlpha: 0}, {
+          duration: 2, 
+          x: 0,
+          y: 0, 
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
+        });
+      }else if(elem.classList.contains('gs_reveal-opacity')){
+        tl.fromTo(elem, {autoAlpha: 0}, {
+          duration: 2, 
+          autoAlpha: 1, 
+          ease: "expo", 
+          overwrite: "auto"
+        });
+      }
+      
+      return tl;
+		}
+		
+		const animateSecurity = function(elem){
+			const obj = {};
+			const tl2 = gsap.timeline(obj);
+			if (elem.classList.contains('gs_security_camera')){
+				tl2.fromTo(elem, {x:-10, y:0},
+					{x:15, y:0})
+			}
+			if (elem.classList.contains('gs_security_circle')){
+				tl2.fromTo(elem, {x:0, y:0},
+					{x:-20, y:10})
+			}	
+			if (elem.classList.contains('gs_security_building')){
+				tl2.fromTo(elem, {scale: 1},
+					{scale: 1.05})
+			}		
+			return tl2;
+		}
+
+
+    gsap.utils.toArray(".gs_reveal").forEach(function(elem) {
+      const trigger = elem.closest('.gs_screen-trigger');
+      console.log(trigger)
+			ScrollTrigger.create({
+				trigger:  trigger.classList.contains('gs_screen-trigger-first') ? trigger : elem,
+				markers: false, 
+				scroller: ".js-scroll-container",
+				scrub: true,
+				start: trigger.classList.contains('gs_screen-trigger-first') ? 'top top' : 'top bottom',
+				end: "bottom top",
+				animation: animateFrom(elem)
+			});
+		});
+		
+		gsap.utils.toArray(".gs_security").forEach(function(elem) {
+      const trigger = elem.closest('.gs_screen-trigger');
+      console.log(trigger)
+			ScrollTrigger.create({
+				trigger:  trigger.classList.contains('gs_screen-trigger-first') ? trigger : elem,
+				markers: false, 
+				scroller: ".js-scroll-container",
+				scrub: true,
+				start: trigger.classList.contains('gs_screen-trigger-first') ? 'top top' : 'top bottom',
+				end: "bottom top",
+				animation: animateSecurity(elem)
+			});
+    });
 
 })(jQuery);
