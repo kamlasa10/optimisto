@@ -460,6 +460,10 @@ body {
 	}
 }
 
+.fixed-content.zindex{
+	z-index: -1;
+}
+
 .fixed-content.white{
 	.socials__link{
 		svg{

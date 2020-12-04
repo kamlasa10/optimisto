@@ -17,10 +17,10 @@ block scripts
     script(src="./assets/scripts/news.js")
 
 block content
-    .fixed-content.fixed-content--end
-        .container
-            .socials.socials--fixed
-                .container
+    //- .fixed-content.fixed-content--end
+    //-     .container
+    //-         .socials.socials--fixed
+    //-             .container
             //-         .socials__title © 2020 Smile Development
             //-         a(href="https://www.facebook.com/optimisto.com.ua").socials__link.socials__link--purple.socials__link--inst
             //-             +svg('inst')
@@ -31,33 +31,33 @@ block content
             //-         span.phone__text (044) 299-22-03
             //-         span.btn-round.phone__btn
             //-             +svg('phone')
-            .gallery__preview-block 
-                button(type="button").gallery__preview-content-show.btn.btn--green Переглянути звіт
-                .gallery__preview-content
-                    .gallery__preview-content-close
-                        button(type="button").menu__right-close.js-gallery__preview-content-btn-close
-                            span.menu__right-close-text Закрити
-                            span.btn-round.menu__right-close-icon
-                                +svg('cross')
-                    .gallery__preview-content-list-title.title-with-linear Квітень 2020
-                            +svg('linear')
-                    .gallery__preview-content-list
-                        .gallery__preview-content-item
-                            b 6-7 секция:
-                            p Монтаж ПВХ конструкцій в 6 секції виконано на 50%
-                            p Монтаж ПВХ конструкцій в 7 секції виконано на 90%
-                            p Влаштування огорожі балконів виконано на 60%
-                            p Штукатурні роботи в 6 секції виконано на 50%
-                            p Штукатурні роботи в 7 секції виконано на 90%
-                        .gallery__preview-content-item
-                            b 8 СЕКЦІЯ:
-                            p Влаштування залізобетонних конструкцій перекриття першого поверху
-                        .gallery__preview-content-item
-                            b 9 СЕКЦІЯ:
-                            p Влаштування вертикальних залізобетонних конструкцій перекриття першого поверху
-                        .gallery__preview-content-item
-                            b БЛАГОУСТРІЙ:
-                            p Ведуться роботи по благоустрою вздовж 5-7 секції, паралельно вул. Київська
+    .gallery__preview-block 
+        button(type="button").gallery__preview-content-show.btn.btn--green Переглянути звіт
+        .gallery__preview-content
+            .gallery__preview-content-close
+                button(type="button").menu__right-close.js-gallery__preview-content-btn-close
+                    span.menu__right-close-text Закрити
+                    span.btn-round.menu__right-close-icon
+                        +svg('cross')
+            .gallery__preview-content-list-title.title-with-linear Квітень 2020
+                    +svg('linear')
+            .gallery__preview-content-list
+                .gallery__preview-content-item
+                    b 6-7 секция:
+                    p Монтаж ПВХ конструкцій в 6 секції виконано на 50%
+                    p Монтаж ПВХ конструкцій в 7 секції виконано на 90%
+                    p Влаштування огорожі балконів виконано на 60%
+                    p Штукатурні роботи в 6 секції виконано на 50%
+                    p Штукатурні роботи в 7 секції виконано на 90%
+                .gallery__preview-content-item
+                    b 8 СЕКЦІЯ:
+                    p Влаштування залізобетонних конструкцій перекриття першого поверху
+                .gallery__preview-content-item
+                    b 9 СЕКЦІЯ:
+                    p Влаштування вертикальних залізобетонних конструкцій перекриття першого поверху
+                .gallery__preview-content-item
+                    b БЛАГОУСТРІЙ:
+                    p Ведуться роботи по благоустрою вздовж 5-7 секції, паралельно вул. Київська
     section.progress.section
         include ../includes/breadcrumbs.pug
         .slider

@@ -370,7 +370,7 @@
 		$('.slider__item--progress').each(function() {
 			$(this).on('click', function() {
 				const item = createGalleryTemplate()
-				document.querySelector('.page__inner').insertAdjacentHTML('afterbegin', item)
+				document.querySelector('.page__content').insertAdjacentHTML('afterbegin', item)
 				$('.slider-control').css('z-index', 3)
 				initSlideByClickItem('.gallery__preview-wrap')
 				$('.galley__preview').show()
